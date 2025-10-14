@@ -1,0 +1,82 @@
+{
+	"Name": "My Estimate",
+	"Total Cost": {
+		"monthly": "55.71",
+		"upfront": "0.00",
+		"12 months": "668.52"
+	},
+	"Metadata": {
+		"Currency": "USD",
+		"Locale": "en_US",
+		"Created On": "10/14/2025",
+		"Legal Disclaimer": "AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",
+		"Share Url": "https://calculator.aws/#/estimate?id=44c29d11c26bc24f71563e951127f34a647d82f4"
+	},
+	"Groups": {
+		"Services": [
+			{
+				"Service Name": "Amazon EC2 ",
+				"Description": "t3.medium",
+				"Region": "Asia Pacific (Thailand)",
+				"Status": "",
+				"Service Cost": {
+					"monthly": "33.87",
+					"upfront": "0.00",
+					"12 months": "406.46"
+				},
+				"Properties": {
+					"Tenancy": "Shared Instances",
+					"Operating system": "Linux",
+					"Workload": "Consistent, Number of instances: 2",
+					"Advance EC2 instance": "t3.medium",
+					"Pricing strategy": "Compute Savings Plans 3yr No Upfront",
+					"Enable monitoring": "disabled",
+					"DT Inbound: Not selected": "0 TB per month",
+					"DT Outbound: Not selected": "0 TB per month",
+					"DT Intra-Region:": "0 TB per month"
+				}
+			},
+			{
+				"Service Name": "Amazon EC2 ",
+				"Description": "t3.small",
+				"Region": "Asia Pacific (Thailand)",
+				"Status": "",
+				"Service Cost": {
+					"monthly": "17.37",
+					"upfront": "0.00",
+					"12 months": "208.49"
+				},
+				"Properties": {
+					"Tenancy": "Shared Instances",
+					"Operating system": "Linux",
+					"Workload": "Consistent, Number of instances: 1",
+					"Advance EC2 instance": "t3.small",
+					"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+					"Enable monitoring": "disabled",
+					"DT Inbound: Not selected": "0 TB per month",
+					"DT Outbound: Not selected": "0 TB per month",
+					"DT Intra-Region:": "0 TB per month"
+				}
+			},
+			{
+				"Service Name": "Amazon Elastic Block Store (EBS)",
+				"Description": "3 node, and 2 ami",
+				"Region": "Asia Pacific (Thailand)",
+				"Status": "",
+				"Service Cost": {
+					"monthly": "4.47",
+					"upfront": "0.00",
+					"12 months": "53.64"
+				},
+				"Properties": {
+					"Number of volumes": "5",
+					"Average duration of volume": "730 hours per month",
+					"Storage amount per volume": "8 GB",
+					"Snapshot Frequency": "No snapshot storage",
+					"Provisioning IOPS per volume (gp3)": "3000",
+					"General Purpose SSD (gp3) - Throughput": "125 MBps"
+				}
+			}
+		]
+	}
+}
