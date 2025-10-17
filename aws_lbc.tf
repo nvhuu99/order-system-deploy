@@ -16,6 +16,11 @@ resource "helm_release" "aws_lbc" {
     { name = "resources.requests.memory", value = "64Mi" },
     { name = "resources.limits.memory", value = "128Mi" },
   ]
+
+  depends_on = [
+    null_resource.update_local_kubeconfig,
+    aws_iam_role_policy_attachment.aws_lbc,
+  ]
 }
 
 resource "aws_eks_pod_identity_association" "aws_lbc" {
@@ -26,10 +31,7 @@ resource "aws_eks_pod_identity_association" "aws_lbc" {
 
   tags = local.tags
 
-  depends_on = [
-    aws_iam_role_policy_attachment.aws_lbc,
-    helm_release.aws_lbc
-  ]
+  depends_on = [helm_release.aws_lbc]
 }
 
 resource "aws_iam_role" "aws_lbc" {

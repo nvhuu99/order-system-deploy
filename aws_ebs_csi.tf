@@ -19,6 +19,11 @@ resource "helm_release" "aws_ebs_csi" {
     { name = "controller.resources.requests.memory", value = "64Mi" },
     { name = "controller.resources.limits.memory", value = "128Mi" },
   ]
+
+  depends_on = [
+    null_resource.update_local_kubeconfig,
+    aws_iam_role_policy_attachment.aws_ebs_csi,
+  ]
 }
 
 resource "aws_eks_pod_identity_association" "aws_ebs_csi" {
@@ -29,10 +34,7 @@ resource "aws_eks_pod_identity_association" "aws_ebs_csi" {
 
   tags = local.tags
 
-  depends_on = [
-    aws_iam_role_policy_attachment.aws_ebs_csi,
-    helm_release.aws_ebs_csi
-  ]
+  depends_on = [helm_release.aws_ebs_csi]
 }
 
 resource "aws_iam_role" "aws_ebs_csi" {
