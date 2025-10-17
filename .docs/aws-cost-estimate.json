@@ -1,16 +1,16 @@
 {
 	"Name": "My Estimate",
 	"Total Cost": {
-		"monthly": "55.71",
+		"monthly": "128.71",
 		"upfront": "0.00",
-		"12 months": "668.52"
+		"12 months": "1544.52"
 	},
 	"Metadata": {
 		"Currency": "USD",
 		"Locale": "en_US",
-		"Created On": "10/14/2025",
+		"Created On": "10/16/2025",
 		"Legal Disclaimer": "AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",
-		"Share Url": "https://calculator.aws/#/estimate?id=44c29d11c26bc24f71563e951127f34a647d82f4"
+		"Share Url": "https://calculator.aws/#/estimate?id=b6a1941d8f9dd4a0e57c14ae1a69f4f2965ebe90"
 	},
 	"Groups": {
 		"Services": [
@@ -75,6 +75,20 @@
 					"Snapshot Frequency": "No snapshot storage",
 					"Provisioning IOPS per volume (gp3)": "3000",
 					"General Purpose SSD (gp3) - Throughput": "125 MBps"
+				}
+			},
+			{
+				"Service Name": "Amazon EKS",
+				"Region": "Asia Pacific (Thailand)",
+				"Status": "",
+				"Service Cost": {
+					"monthly": "73.00",
+					"upfront": "0.00",
+					"12 months": "876.00"
+				},
+				"Properties": {
+					"Number of EKS Clusters": "1",
+					"Number of hybrid nodes": "1 per month"
 				}
 			}
 		]
