@@ -7,6 +7,11 @@ terraform {
       version = "6.16.0"
     }
 
+    flux = {
+      source  = "fluxcd/flux"
+      version = "1.7.3"
+    }
+
     tls = {
       source  = "hashicorp/tls"
       version = "4.1.0"
@@ -20,6 +25,19 @@ provider "aws" {
   default_tags {
     tags = {
       "Namespace" = "order_system"
+    }
+  }
+}
+
+provider "flux" {
+  kubernetes = {
+    config_path = local.kube_config_path
+  }
+  git = {
+    url = local.github_repo_http_url
+    http = {
+      username = local.github_username
+      password = local.github_token
     }
   }
 }
