@@ -1,0 +1,971 @@
+W1017 15:03:33.846623       1 feature_gate.go:352] Setting GA feature gate DynamicResourceAllocation=false. It will be removed in a future release.
+I1017 15:03:33.846814       1 main.go:369] Cluster Autoscaler 1.34.1
+I1017 15:03:34.045418       1 leaderelection.go:257] attempting to acquire leader lease kube-system/cluster-autoscaler...
+I1017 15:03:34.049104       1 leaderelection.go:468] lock is held by autoscaler-aws-cluster-autoscaler-7696cf695b-z7z8k and has not yet expired
+I1017 15:03:34.049133       1 leaderelection.go:266] failed to acquire lease kube-system/cluster-autoscaler
+I1017 15:03:36.463387       1 leaderelection.go:468] lock is held by autoscaler-aws-cluster-autoscaler-7696cf695b-z7z8k and has not yet expired
+I1017 15:03:36.463409       1 leaderelection.go:266] failed to acquire lease kube-system/cluster-autoscaler
+I1017 15:03:39.127086       1 leaderelection.go:468] lock is held by autoscaler-aws-cluster-autoscaler-7696cf695b-z7z8k and has not yet expired
+I1017 15:03:39.127169       1 leaderelection.go:266] failed to acquire lease kube-system/cluster-autoscaler
+I1017 15:03:43.202755       1 leaderelection.go:468] lock is held by autoscaler-aws-cluster-autoscaler-7696cf695b-z7z8k and has not yet expired
+I1017 15:03:43.202776       1 leaderelection.go:266] failed to acquire lease kube-system/cluster-autoscaler
+I1017 15:03:46.664728       1 leaderelection.go:468] lock is held by autoscaler-aws-cluster-autoscaler-7696cf695b-z7z8k and has not yet expired
+I1017 15:03:46.664749       1 leaderelection.go:266] failed to acquire lease kube-system/cluster-autoscaler
+I1017 15:03:50.307564       1 leaderelection.go:271] successfully acquired lease kube-system/cluster-autoscaler
+I1017 15:03:50.307756       1 event_sink_logging_wrapper.go:48] Event(v1.ObjectReference{Kind:"Lease", Namespace:"kube-system", Name:"cluster-autoscaler", UID:"1ab8f843-23fc-44b6-8bae-f3575306e7e6", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"171220", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' autoscaler-aws-cluster-autoscaler-5667585cf9-d4q45 became leader
+I1017 15:03:50.309092       1 framework.go:412] "the scheduler starts to work with those plugins" Plugins={"PreEnqueue":{"Enabled":[{"Name":"SchedulingGates","Weight":0},{"Name":"DefaultPreemption","Weight":0}],"Disabled":null},"QueueSort":{"Enabled":[{"Name":"PrioritySort","Weight":0}],"Disabled":null},"PreFilter":{"Enabled":[{"Name":"NodeAffinity","Weight":0},{"Name":"NodePorts","Weight":0},{"Name":"NodeResourcesFit","Weight":0},{"Name":"VolumeRestrictions","Weight":0},{"Name":"NodeVolumeLimits","Weight":0},{"Name":"VolumeBinding","Weight":0},{"Name":"VolumeZone","Weight":0},{"Name":"PodTopologySpread","Weight":0},{"Name":"InterPodAffinity","Weight":0}],"Disabled":null},"Filter":{"Enabled":[{"Name":"NodeUnschedulable","Weight":0},{"Name":"NodeName","Weight":0},{"Name":"TaintToleration","Weight":0},{"Name":"NodeAffinity","Weight":0},{"Name":"NodePorts","Weight":0},{"Name":"NodeResourcesFit","Weight":0},{"Name":"VolumeRestrictions","Weight":0},{"Name":"NodeVolumeLimits","Weight":0},{"Name":"VolumeBinding","Weight":0},{"Name":"VolumeZone","Weight":0},{"Name":"PodTopologySpread","Weight":0},{"Name":"InterPodAffinity","Weight":0}],"Disabled":null},"PostFilter":{"Enabled":[{"Name":"DefaultPreemption","Weight":0}],"Disabled":null},"PreScore":{"Enabled":[{"Name":"TaintToleration","Weight":0},{"Name":"NodeAffinity","Weight":0},{"Name":"NodeResourcesFit","Weight":0},{"Name":"VolumeBinding","Weight":0},{"Name":"PodTopologySpread","Weight":0},{"Name":"InterPodAffinity","Weight":0},{"Name":"NodeResourcesBalancedAllocation","Weight":0}],"Disabled":null},"Score":{"Enabled":[{"Name":"TaintToleration","Weight":3},{"Name":"NodeAffinity","Weight":2},{"Name":"NodeResourcesFit","Weight":1},{"Name":"VolumeBinding","Weight":1},{"Name":"PodTopologySpread","Weight":2},{"Name":"InterPodAffinity","Weight":2},{"Name":"NodeResourcesBalancedAllocation","Weight":1},{"Name":"ImageLocality","Weight":1}],"Disabled":null},"Reserve":{"Enabled":[{"Name":"VolumeBinding","Weight":0}],"Disabled":null},"Permit":{"Enabled":null,"Disabled":null},"PreBind":{"Enabled":[{"Name":"VolumeBinding","Weight":0}],"Disabled":null},"Bind":{"Enabled":[{"Name":"DefaultBinder","Weight":0}],"Disabled":null},"PostBind":{"Enabled":null,"Disabled":null},"MultiPoint":{"Enabled":null,"Disabled":null}}
+I1017 15:03:50.503721       1 cloud_provider_builder.go:30] Building aws cloud provider.
+I1017 15:03:56.045717       1 aws_cloud_provider.go:453] Using static instance type m6a.48xlarge
+I1017 15:03:56.045751       1 aws_cloud_provider.go:453] Using static instance type z1d.2xlarge
+I1017 15:03:56.045756       1 aws_cloud_provider.go:453] Using static instance type c6gd.4xlarge
+I1017 15:03:56.045759       1 aws_cloud_provider.go:453] Using static instance type i8g.24xlarge
+I1017 15:03:56.045771       1 aws_cloud_provider.go:453] Using static instance type r6a.48xlarge
+I1017 15:03:56.045775       1 aws_cloud_provider.go:453] Using static instance type c5d.metal
+I1017 15:03:56.045778       1 aws_cloud_provider.go:453] Using static instance type r8gd.metal-24xl
+I1017 15:03:56.045781       1 aws_cloud_provider.go:453] Using static instance type i7i.2xlarge
+I1017 15:03:56.045784       1 aws_cloud_provider.go:453] Using static instance type g5g.xlarge
+I1017 15:03:56.045787       1 aws_cloud_provider.go:453] Using static instance type r5dn.24xlarge
+I1017 15:03:56.045791       1 aws_cloud_provider.go:453] Using static instance type m1.small
+I1017 15:03:56.045794       1 aws_cloud_provider.go:453] Using static instance type m3.medium
+I1017 15:03:56.045796       1 aws_cloud_provider.go:453] Using static instance type m5a.8xlarge
+I1017 15:03:56.045799       1 aws_cloud_provider.go:453] Using static instance type m5n.12xlarge
+I1017 15:03:56.045802       1 aws_cloud_provider.go:453] Using static instance type r6a.metal
+I1017 15:03:56.045806       1 aws_cloud_provider.go:453] Using static instance type m5zn.2xlarge
+I1017 15:03:56.045812       1 aws_cloud_provider.go:453] Using static instance type m6idn.12xlarge
+I1017 15:03:56.045815       1 aws_cloud_provider.go:453] Using static instance type r5ad.16xlarge
+I1017 15:03:56.045818       1 aws_cloud_provider.go:453] Using static instance type r5b.4xlarge
+I1017 15:03:56.244765       1 aws_cloud_provider.go:453] Using static instance type r6gd.xlarge
+I1017 15:03:56.244774       1 aws_cloud_provider.go:453] Using static instance type x2iedn.metal
+I1017 15:03:56.244778       1 aws_cloud_provider.go:453] Using static instance type x8g.4xlarge
+I1017 15:03:56.244782       1 aws_cloud_provider.go:453] Using static instance type c5n.4xlarge
+I1017 15:03:56.244785       1 aws_cloud_provider.go:453] Using static instance type c5n.xlarge
+I1017 15:03:56.244789       1 aws_cloud_provider.go:453] Using static instance type r5a.large
+I1017 15:03:56.244792       1 aws_cloud_provider.go:453] Using static instance type c7gn.4xlarge
+I1017 15:03:56.244796       1 aws_cloud_provider.go:453] Using static instance type g6e.8xlarge
+I1017 15:03:56.244814       1 aws_cloud_provider.go:453] Using static instance type i3.16xlarge
+I1017 15:03:56.244817       1 aws_cloud_provider.go:453] Using static instance type i8g.xlarge
+I1017 15:03:56.244821       1 aws_cloud_provider.go:453] Using static instance type m5d.metal
+I1017 15:03:56.244824       1 aws_cloud_provider.go:453] Using static instance type m6in.24xlarge
+I1017 15:03:56.244827       1 aws_cloud_provider.go:453] Using static instance type m8gd.large
+I1017 15:03:56.244831       1 aws_cloud_provider.go:453] Using static instance type r7a.2xlarge
+I1017 15:03:56.244836       1 aws_cloud_provider.go:453] Using static instance type r8g.24xlarge
+I1017 15:03:56.244838       1 aws_cloud_provider.go:453] Using static instance type t2.2xlarge
+I1017 15:03:56.244841       1 aws_cloud_provider.go:453] Using static instance type c8gd.48xlarge
+I1017 15:03:56.244844       1 aws_cloud_provider.go:453] Using static instance type i7ie.large
+I1017 15:03:56.244847       1 aws_cloud_provider.go:453] Using static instance type m8gd.12xlarge
+I1017 15:03:56.244850       1 aws_cloud_provider.go:453] Using static instance type c6a.24xlarge
+I1017 15:03:56.244856       1 aws_cloud_provider.go:453] Using static instance type f1.16xlarge
+I1017 15:03:56.244859       1 aws_cloud_provider.go:453] Using static instance type g4ad.8xlarge
+I1017 15:03:56.244862       1 aws_cloud_provider.go:453] Using static instance type m5ad.8xlarge
+I1017 15:03:56.244865       1 aws_cloud_provider.go:453] Using static instance type c8gd.metal-24xl
+I1017 15:03:56.244868       1 aws_cloud_provider.go:453] Using static instance type g5.4xlarge
+I1017 15:03:56.244871       1 aws_cloud_provider.go:453] Using static instance type r3.xlarge
+I1017 15:03:56.244873       1 aws_cloud_provider.go:453] Using static instance type r6in.8xlarge
+I1017 15:03:56.244876       1 aws_cloud_provider.go:453] Using static instance type r7a.metal-48xl
+I1017 15:03:56.244878       1 aws_cloud_provider.go:453] Using static instance type x2gd.metal
+I1017 15:03:56.244881       1 aws_cloud_provider.go:453] Using static instance type c4.2xlarge
+I1017 15:03:56.244884       1 aws_cloud_provider.go:453] Using static instance type c7a.metal-48xl
+I1017 15:03:56.244889       1 aws_cloud_provider.go:453] Using static instance type g4dn.8xlarge
+I1017 15:03:56.244892       1 aws_cloud_provider.go:453] Using static instance type g5g.16xlarge
+I1017 15:03:56.244907       1 aws_cloud_provider.go:453] Using static instance type m5a.large
+I1017 15:03:56.244911       1 aws_cloud_provider.go:453] Using static instance type m8gd.48xlarge
+I1017 15:03:56.244914       1 aws_cloud_provider.go:453] Using static instance type m8gd.8xlarge
+I1017 15:03:56.244916       1 aws_cloud_provider.go:453] Using static instance type r5d.large
+I1017 15:03:56.244919       1 aws_cloud_provider.go:453] Using static instance type r8gd.2xlarge
+I1017 15:03:56.244922       1 aws_cloud_provider.go:453] Using static instance type gr6.8xlarge
+I1017 15:03:56.244924       1 aws_cloud_provider.go:453] Using static instance type r6a.32xlarge
+I1017 15:03:56.244927       1 aws_cloud_provider.go:453] Using static instance type r8g.metal-48xl
+I1017 15:03:56.244931       1 aws_cloud_provider.go:453] Using static instance type c5a.12xlarge
+I1017 15:03:56.244936       1 aws_cloud_provider.go:453] Using static instance type c6a.8xlarge
+I1017 15:03:56.244941       1 aws_cloud_provider.go:453] Using static instance type i2.xlarge
+I1017 15:03:56.244945       1 aws_cloud_provider.go:453] Using static instance type c7a.32xlarge
+I1017 15:03:56.244948       1 aws_cloud_provider.go:453] Using static instance type is4gen.xlarge
+I1017 15:03:56.244951       1 aws_cloud_provider.go:453] Using static instance type c6gd.16xlarge
+I1017 15:03:56.244954       1 aws_cloud_provider.go:453] Using static instance type m5d.2xlarge
+I1017 15:03:56.244957       1 aws_cloud_provider.go:453] Using static instance type r5b.16xlarge
+I1017 15:03:56.244959       1 aws_cloud_provider.go:453] Using static instance type c7a.2xlarge
+I1017 15:03:56.244962       1 aws_cloud_provider.go:453] Using static instance type m5dn.metal
+I1017 15:03:56.244965       1 aws_cloud_provider.go:453] Using static instance type t3a.xlarge
+I1017 15:03:56.244967       1 aws_cloud_provider.go:453] Using static instance type c5d.2xlarge
+I1017 15:03:56.244970       1 aws_cloud_provider.go:453] Using static instance type m6in.8xlarge
+I1017 15:03:56.244976       1 aws_cloud_provider.go:453] Using static instance type c8gd.12xlarge
+I1017 15:03:56.244980       1 aws_cloud_provider.go:453] Using static instance type c6gd.medium
+I1017 15:03:56.244983       1 aws_cloud_provider.go:453] Using static instance type i4g.8xlarge
+I1017 15:03:56.244986       1 aws_cloud_provider.go:453] Using static instance type m2.xlarge
+I1017 15:03:56.244988       1 aws_cloud_provider.go:453] Using static instance type x1e.8xlarge
+I1017 15:03:56.244991       1 aws_cloud_provider.go:453] Using static instance type r7iz.xlarge
+I1017 15:03:56.244994       1 aws_cloud_provider.go:453] Using static instance type c5.18xlarge
+I1017 15:03:56.244998       1 aws_cloud_provider.go:453] Using static instance type i7ie.metal-24xl
+I1017 15:03:56.245000       1 aws_cloud_provider.go:453] Using static instance type r4.4xlarge
+I1017 15:03:56.245004       1 aws_cloud_provider.go:453] Using static instance type c7gn.16xlarge
+I1017 15:03:56.245006       1 aws_cloud_provider.go:453] Using static instance type r5n.large
+I1017 15:03:56.245011       1 aws_cloud_provider.go:453] Using static instance type r6idn.large
+I1017 15:03:56.245019       1 aws_cloud_provider.go:453] Using static instance type r6idn.metal
+I1017 15:03:56.245022       1 aws_cloud_provider.go:453] Using static instance type x1e.xlarge
+I1017 15:03:56.245025       1 aws_cloud_provider.go:453] Using static instance type a1.xlarge
+I1017 15:03:56.245028       1 aws_cloud_provider.go:453] Using static instance type m8gd.16xlarge
+I1017 15:03:56.245031       1 aws_cloud_provider.go:453] Using static instance type x1e.16xlarge
+I1017 15:03:56.245033       1 aws_cloud_provider.go:453] Using static instance type c5.24xlarge
+I1017 15:03:56.245037       1 aws_cloud_provider.go:453] Using static instance type d2.8xlarge
+I1017 15:03:56.245041       1 aws_cloud_provider.go:453] Using static instance type d3.2xlarge
+I1017 15:03:56.245043       1 aws_cloud_provider.go:453] Using static instance type g4dn.2xlarge
+I1017 15:03:56.245046       1 aws_cloud_provider.go:453] Using static instance type g6e.16xlarge
+I1017 15:03:56.245052       1 aws_cloud_provider.go:453] Using static instance type i4g.large
+I1017 15:03:56.245055       1 aws_cloud_provider.go:453] Using static instance type t2.small
+I1017 15:03:56.245058       1 aws_cloud_provider.go:453] Using static instance type c6a.16xlarge
+I1017 15:03:56.245060       1 aws_cloud_provider.go:453] Using static instance type h1.16xlarge
+I1017 15:03:56.245063       1 aws_cloud_provider.go:453] Using static instance type inf2.xlarge
+I1017 15:03:56.245065       1 aws_cloud_provider.go:453] Using static instance type x2iedn.24xlarge
+I1017 15:03:56.245068       1 aws_cloud_provider.go:453] Using static instance type inf1.6xlarge
+I1017 15:03:56.245071       1 aws_cloud_provider.go:453] Using static instance type x1.32xlarge
+I1017 15:03:56.245074       1 aws_cloud_provider.go:453] Using static instance type m5dn.12xlarge
+I1017 15:03:56.245077       1 aws_cloud_provider.go:453] Using static instance type c5d.12xlarge
+I1017 15:03:56.245080       1 aws_cloud_provider.go:453] Using static instance type g6.2xlarge
+I1017 15:03:56.245083       1 aws_cloud_provider.go:453] Using static instance type m5.4xlarge
+I1017 15:03:56.245088       1 aws_cloud_provider.go:453] Using static instance type r5.4xlarge
+I1017 15:03:56.245091       1 aws_cloud_provider.go:453] Using static instance type f2.48xlarge
+I1017 15:03:56.245094       1 aws_cloud_provider.go:453] Using static instance type m5d.large
+I1017 15:03:56.245096       1 aws_cloud_provider.go:453] Using static instance type r5d.2xlarge
+I1017 15:03:56.245099       1 aws_cloud_provider.go:453] Using static instance type r8gd.medium
+I1017 15:03:56.245102       1 aws_cloud_provider.go:453] Using static instance type hpc7g.4xlarge
+I1017 15:03:56.245105       1 aws_cloud_provider.go:453] Using static instance type m8g.2xlarge
+I1017 15:03:56.245108       1 aws_cloud_provider.go:453] Using static instance type r5n.8xlarge
+I1017 15:03:56.245111       1 aws_cloud_provider.go:453] Using static instance type m5n.24xlarge
+I1017 15:03:56.245113       1 aws_cloud_provider.go:453] Using static instance type m6a.32xlarge
+I1017 15:03:56.245116       1 aws_cloud_provider.go:453] Using static instance type r7a.12xlarge
+I1017 15:03:56.245126       1 aws_cloud_provider.go:453] Using static instance type f1.2xlarge
+I1017 15:03:56.245128       1 aws_cloud_provider.go:453] Using static instance type c1.medium
+I1017 15:03:56.245131       1 aws_cloud_provider.go:453] Using static instance type c8gd.24xlarge
+I1017 15:03:56.245134       1 aws_cloud_provider.go:453] Using static instance type c5a.2xlarge
+I1017 15:03:56.245136       1 aws_cloud_provider.go:453] Using static instance type c7gd.xlarge
+I1017 15:03:56.245140       1 aws_cloud_provider.go:453] Using static instance type u7in-16tb.224xlarge
+I1017 15:03:56.245143       1 aws_cloud_provider.go:453] Using static instance type m5ad.24xlarge
+I1017 15:03:56.245146       1 aws_cloud_provider.go:453] Using static instance type m8gd.24xlarge
+I1017 15:03:56.245149       1 aws_cloud_provider.go:453] Using static instance type t3a.nano
+I1017 15:03:56.245152       1 aws_cloud_provider.go:453] Using static instance type c1.xlarge
+I1017 15:03:56.245154       1 aws_cloud_provider.go:453] Using static instance type c5n.2xlarge
+I1017 15:03:56.245157       1 aws_cloud_provider.go:453] Using static instance type c7gd.large
+I1017 15:03:56.245162       1 aws_cloud_provider.go:453] Using static instance type c8gd.medium
+I1017 15:03:56.245165       1 aws_cloud_provider.go:453] Using static instance type m5d.8xlarge
+I1017 15:03:56.245168       1 aws_cloud_provider.go:453] Using static instance type mac1.metal
+I1017 15:03:56.245172       1 aws_cloud_provider.go:453] Using static instance type c5.metal
+I1017 15:03:56.245175       1 aws_cloud_provider.go:453] Using static instance type m5dn.large
+I1017 15:03:56.245178       1 aws_cloud_provider.go:453] Using static instance type r5d.metal
+I1017 15:03:56.245181       1 aws_cloud_provider.go:453] Using static instance type x2iezn.2xlarge
+I1017 15:03:56.245183       1 aws_cloud_provider.go:453] Using static instance type g6.4xlarge
+I1017 15:03:56.245186       1 aws_cloud_provider.go:453] Using static instance type h1.4xlarge
+I1017 15:03:56.245188       1 aws_cloud_provider.go:453] Using static instance type m4.xlarge
+I1017 15:03:56.245191       1 aws_cloud_provider.go:453] Using static instance type p3.8xlarge
+I1017 15:03:56.245196       1 aws_cloud_provider.go:453] Using static instance type r5a.4xlarge
+I1017 15:03:56.245199       1 aws_cloud_provider.go:453] Using static instance type r8gd.8xlarge
+I1017 15:03:56.245202       1 aws_cloud_provider.go:453] Using static instance type g4dn.metal
+I1017 15:03:56.245205       1 aws_cloud_provider.go:453] Using static instance type c5ad.large
+I1017 15:03:56.245209       1 aws_cloud_provider.go:453] Using static instance type im4gn.16xlarge
+I1017 15:03:56.245212       1 aws_cloud_provider.go:453] Using static instance type r6gd.4xlarge
+I1017 15:03:56.245217       1 aws_cloud_provider.go:453] Using static instance type c7gn.2xlarge
+I1017 15:03:56.245221       1 aws_cloud_provider.go:453] Using static instance type inf1.24xlarge
+I1017 15:03:56.245225       1 aws_cloud_provider.go:453] Using static instance type x8g.8xlarge
+I1017 15:03:56.245227       1 aws_cloud_provider.go:453] Using static instance type m6idn.2xlarge
+I1017 15:03:56.245236       1 aws_cloud_provider.go:453] Using static instance type m7a.32xlarge
+I1017 15:03:56.245241       1 aws_cloud_provider.go:453] Using static instance type r4.large
+I1017 15:03:56.245244       1 aws_cloud_provider.go:453] Using static instance type r5a.2xlarge
+I1017 15:03:56.245247       1 aws_cloud_provider.go:453] Using static instance type r5b.2xlarge
+I1017 15:03:56.245250       1 aws_cloud_provider.go:453] Using static instance type r6a.12xlarge
+I1017 15:03:56.245254       1 aws_cloud_provider.go:453] Using static instance type m6idn.8xlarge
+I1017 15:03:56.245256       1 aws_cloud_provider.go:453] Using static instance type r5dn.8xlarge
+I1017 15:03:56.245259       1 aws_cloud_provider.go:453] Using static instance type r7a.4xlarge
+I1017 15:03:56.245262       1 aws_cloud_provider.go:453] Using static instance type z1d.metal
+I1017 15:03:56.245264       1 aws_cloud_provider.go:453] Using static instance type c5.4xlarge
+I1017 15:03:56.245267       1 aws_cloud_provider.go:453] Using static instance type m8gd.medium
+I1017 15:03:56.245269       1 aws_cloud_provider.go:453] Using static instance type u-12tb1.112xlarge
+I1017 15:03:56.245275       1 aws_cloud_provider.go:453] Using static instance type g6.24xlarge
+I1017 15:03:56.245277       1 aws_cloud_provider.go:453] Using static instance type i3.xlarge
+I1017 15:03:56.245280       1 aws_cloud_provider.go:453] Using static instance type m7a.16xlarge
+I1017 15:03:56.245282       1 aws_cloud_provider.go:453] Using static instance type r6idn.24xlarge
+I1017 15:03:56.245286       1 aws_cloud_provider.go:453] Using static instance type is4gen.2xlarge
+I1017 15:03:56.245289       1 aws_cloud_provider.go:453] Using static instance type m6a.large
+I1017 15:03:56.245293       1 aws_cloud_provider.go:453] Using static instance type m5n.16xlarge
+I1017 15:03:56.245296       1 aws_cloud_provider.go:453] Using static instance type x2iedn.32xlarge
+I1017 15:03:56.245299       1 aws_cloud_provider.go:453] Using static instance type x8g.16xlarge
+I1017 15:03:56.245302       1 aws_cloud_provider.go:453] Using static instance type i4g.2xlarge
+I1017 15:03:56.245306       1 aws_cloud_provider.go:453] Using static instance type r8g.xlarge
+I1017 15:03:56.245312       1 aws_cloud_provider.go:453] Using static instance type trn1.32xlarge
+I1017 15:03:56.245315       1 aws_cloud_provider.go:453] Using static instance type g6e.2xlarge
+I1017 15:03:56.245318       1 aws_cloud_provider.go:453] Using static instance type h1.8xlarge
+I1017 15:03:56.245321       1 aws_cloud_provider.go:453] Using static instance type im4gn.large
+I1017 15:03:56.245324       1 aws_cloud_provider.go:453] Using static instance type m5dn.8xlarge
+I1017 15:03:56.245328       1 aws_cloud_provider.go:453] Using static instance type d3en.4xlarge
+I1017 15:03:56.245331       1 aws_cloud_provider.go:453] Using static instance type g4dn.4xlarge
+I1017 15:03:56.245334       1 aws_cloud_provider.go:453] Using static instance type m5zn.xlarge
+I1017 15:03:56.245336       1 aws_cloud_provider.go:453] Using static instance type r5.8xlarge
+I1017 15:03:56.245339       1 aws_cloud_provider.go:453] Using static instance type vt1.24xlarge
+I1017 15:03:56.245347       1 aws_cloud_provider.go:453] Using static instance type r5n.12xlarge
+I1017 15:03:56.245458       1 aws_cloud_provider.go:453] Using static instance type i4g.xlarge
+I1017 15:03:56.245461       1 aws_cloud_provider.go:453] Using static instance type m6idn.24xlarge
+I1017 15:03:56.245465       1 aws_cloud_provider.go:453] Using static instance type t2.nano
+I1017 15:03:56.245467       1 aws_cloud_provider.go:453] Using static instance type i7i.4xlarge
+I1017 15:03:56.245470       1 aws_cloud_provider.go:453] Using static instance type m8g.4xlarge
+I1017 15:03:56.245473       1 aws_cloud_provider.go:453] Using static instance type m8g.medium
+I1017 15:03:56.245479       1 aws_cloud_provider.go:453] Using static instance type r6gd.2xlarge
+I1017 15:03:56.245483       1 aws_cloud_provider.go:453] Using static instance type c5a.16xlarge
+I1017 15:03:56.245486       1 aws_cloud_provider.go:453] Using static instance type m5.2xlarge
+I1017 15:03:56.245490       1 aws_cloud_provider.go:453] Using static instance type r7iz.12xlarge
+I1017 15:03:56.245493       1 aws_cloud_provider.go:453] Using static instance type c3.2xlarge
+I1017 15:03:56.245497       1 aws_cloud_provider.go:453] Using static instance type r8gd.24xlarge
+I1017 15:03:56.245500       1 aws_cloud_provider.go:453] Using static instance type g4ad.4xlarge
+I1017 15:03:56.245502       1 aws_cloud_provider.go:453] Using static instance type m5zn.metal
+I1017 15:03:56.245505       1 aws_cloud_provider.go:453] Using static instance type i7i.24xlarge
+I1017 15:03:56.245508       1 aws_cloud_provider.go:453] Using static instance type m6a.24xlarge
+I1017 15:03:56.245511       1 aws_cloud_provider.go:453] Using static instance type m6in.xlarge
+I1017 15:03:56.245516       1 aws_cloud_provider.go:453] Using static instance type g5.16xlarge
+I1017 15:03:56.245519       1 aws_cloud_provider.go:453] Using static instance type vt1.6xlarge
+I1017 15:03:56.245522       1 aws_cloud_provider.go:453] Using static instance type c5a.24xlarge
+I1017 15:03:56.245524       1 aws_cloud_provider.go:453] Using static instance type m4.16xlarge
+I1017 15:03:56.245528       1 aws_cloud_provider.go:453] Using static instance type t1.micro
+I1017 15:03:56.245531       1 aws_cloud_provider.go:453] Using static instance type c5.2xlarge
+I1017 15:03:56.245533       1 aws_cloud_provider.go:453] Using static instance type c7gn.8xlarge
+I1017 15:03:56.245535       1 aws_cloud_provider.go:453] Using static instance type m6a.16xlarge
+I1017 15:03:56.245538       1 aws_cloud_provider.go:453] Using static instance type x2gd.xlarge
+I1017 15:03:56.245541       1 aws_cloud_provider.go:453] Using static instance type m4.4xlarge
+I1017 15:03:56.245544       1 aws_cloud_provider.go:453] Using static instance type r5d.12xlarge
+I1017 15:03:56.245549       1 aws_cloud_provider.go:453] Using static instance type r5n.16xlarge
+I1017 15:03:56.245552       1 aws_cloud_provider.go:453] Using static instance type r5n.xlarge
+I1017 15:03:56.245555       1 aws_cloud_provider.go:453] Using static instance type c7a.16xlarge
+I1017 15:03:56.245557       1 aws_cloud_provider.go:453] Using static instance type m6idn.32xlarge
+I1017 15:03:56.245566       1 aws_cloud_provider.go:453] Using static instance type r5.2xlarge
+I1017 15:03:56.245570       1 aws_cloud_provider.go:453] Using static instance type r5ad.24xlarge
+I1017 15:03:56.245572       1 aws_cloud_provider.go:453] Using static instance type r6idn.16xlarge
+I1017 15:03:56.245575       1 aws_cloud_provider.go:453] Using static instance type u-9tb1.112xlarge
+I1017 15:03:56.245578       1 aws_cloud_provider.go:453] Using static instance type x2gd.medium
+I1017 15:03:56.245581       1 aws_cloud_provider.go:453] Using static instance type g6.48xlarge
+I1017 15:03:56.245628       1 aws_cloud_provider.go:453] Using static instance type i8g.2xlarge
+I1017 15:03:56.245631       1 aws_cloud_provider.go:453] Using static instance type is4gen.medium
+I1017 15:03:56.245637       1 aws_cloud_provider.go:453] Using static instance type u-18tb1.112xlarge
+I1017 15:03:56.245639       1 aws_cloud_provider.go:453] Using static instance type hpc7g.8xlarge
+I1017 15:03:56.245642       1 aws_cloud_provider.go:453] Using static instance type r5b.24xlarge
+I1017 15:03:56.245645       1 aws_cloud_provider.go:453] Using static instance type p4de.24xlarge
+I1017 15:03:56.245649       1 aws_cloud_provider.go:453] Using static instance type c5ad.12xlarge
+I1017 15:03:56.245652       1 aws_cloud_provider.go:453] Using static instance type m6in.32xlarge
+I1017 15:03:56.245654       1 aws_cloud_provider.go:453] Using static instance type x2iedn.xlarge
+I1017 15:03:56.245657       1 aws_cloud_provider.go:453] Using static instance type c7a.medium
+I1017 15:03:56.245660       1 aws_cloud_provider.go:453] Using static instance type g5g.2xlarge
+I1017 15:03:56.245663       1 aws_cloud_provider.go:453] Using static instance type g5g.4xlarge
+I1017 15:03:56.245666       1 aws_cloud_provider.go:453] Using static instance type i3.2xlarge
+I1017 15:03:56.245668       1 aws_cloud_provider.go:453] Using static instance type c5.xlarge
+I1017 15:03:56.245674       1 aws_cloud_provider.go:453] Using static instance type p3.16xlarge
+I1017 15:03:56.245677       1 aws_cloud_provider.go:453] Using static instance type m5d.12xlarge
+I1017 15:03:56.245679       1 aws_cloud_provider.go:453] Using static instance type c7gn.12xlarge
+I1017 15:03:56.245682       1 aws_cloud_provider.go:453] Using static instance type x8g.xlarge
+I1017 15:03:56.245685       1 aws_cloud_provider.go:453] Using static instance type i7ie.12xlarge
+I1017 15:03:56.245687       1 aws_cloud_provider.go:453] Using static instance type r8gd.4xlarge
+I1017 15:03:56.245690       1 aws_cloud_provider.go:453] Using static instance type d2.4xlarge
+I1017 15:03:56.245692       1 aws_cloud_provider.go:453] Using static instance type f2.12xlarge
+I1017 15:03:56.245695       1 aws_cloud_provider.go:453] Using static instance type r6idn.2xlarge
+I1017 15:03:56.245698       1 aws_cloud_provider.go:453] Using static instance type i7ie.24xlarge
+I1017 15:03:56.245700       1 aws_cloud_provider.go:453] Using static instance type c8gd.metal-48xl
+I1017 15:03:56.245705       1 aws_cloud_provider.go:453] Using static instance type d3en.6xlarge
+I1017 15:03:56.245708       1 aws_cloud_provider.go:453] Using static instance type r5b.xlarge
+I1017 15:03:56.245716       1 aws_cloud_provider.go:453] Using static instance type r5n.2xlarge
+I1017 15:03:56.245719       1 aws_cloud_provider.go:453] Using static instance type x2iezn.metal
+I1017 15:03:56.245721       1 aws_cloud_provider.go:453] Using static instance type m5.xlarge
+I1017 15:03:56.245724       1 aws_cloud_provider.go:453] Using static instance type m8gd.4xlarge
+I1017 15:03:56.245727       1 aws_cloud_provider.go:453] Using static instance type r6in.metal
+I1017 15:03:56.245730       1 aws_cloud_provider.go:453] Using static instance type r8g.large
+I1017 15:03:56.245732       1 aws_cloud_provider.go:453] Using static instance type x2gd.8xlarge
+I1017 15:03:56.245735       1 aws_cloud_provider.go:453] Using static instance type r3.8xlarge
+I1017 15:03:56.245738       1 aws_cloud_provider.go:453] Using static instance type r4.xlarge
+I1017 15:03:56.245742       1 aws_cloud_provider.go:453] Using static instance type u7in-24tb.224xlarge
+I1017 15:03:56.245745       1 aws_cloud_provider.go:453] Using static instance type i8g.large
+I1017 15:03:56.245748       1 aws_cloud_provider.go:453] Using static instance type is4gen.4xlarge
+I1017 15:03:56.245750       1 aws_cloud_provider.go:453] Using static instance type r7iz.8xlarge
+I1017 15:03:56.245753       1 aws_cloud_provider.go:453] Using static instance type m5dn.24xlarge
+I1017 15:03:56.245756       1 aws_cloud_provider.go:453] Using static instance type a1.metal
+I1017 15:03:56.245758       1 aws_cloud_provider.go:453] Using static instance type c7a.24xlarge
+I1017 15:03:56.245761       1 aws_cloud_provider.go:453] Using static instance type c7a.8xlarge
+I1017 15:03:56.245764       1 aws_cloud_provider.go:453] Using static instance type r5b.metal
+I1017 15:03:56.245767       1 aws_cloud_provider.go:453] Using static instance type c7gd.4xlarge
+I1017 15:03:56.245769       1 aws_cloud_provider.go:453] Using static instance type m6a.2xlarge
+I1017 15:03:56.245771       1 aws_cloud_provider.go:453] Using static instance type d2.2xlarge
+I1017 15:03:56.245777       1 aws_cloud_provider.go:453] Using static instance type m6in.2xlarge
+I1017 15:03:56.245780       1 aws_cloud_provider.go:453] Using static instance type x2gd.large
+I1017 15:03:56.245782       1 aws_cloud_provider.go:453] Using static instance type c7gn.xlarge
+I1017 15:03:56.245785       1 aws_cloud_provider.go:453] Using static instance type c8gd.large
+I1017 15:03:56.245787       1 aws_cloud_provider.go:453] Using static instance type i7ie.6xlarge
+I1017 15:03:56.245791       1 aws_cloud_provider.go:453] Using static instance type mac2-m2.metal
+I1017 15:03:56.245793       1 aws_cloud_provider.go:453] Using static instance type r7iz.large
+I1017 15:03:56.245796       1 aws_cloud_provider.go:453] Using static instance type x2iezn.12xlarge
+I1017 15:03:56.245798       1 aws_cloud_provider.go:453] Using static instance type c6a.2xlarge
+I1017 15:03:56.245801       1 aws_cloud_provider.go:453] Using static instance type i7ie.3xlarge
+I1017 15:03:56.245803       1 aws_cloud_provider.go:453] Using static instance type r6idn.4xlarge
+I1017 15:03:56.245809       1 aws_cloud_provider.go:453] Using static instance type r6in.32xlarge
+I1017 15:03:56.245825       1 aws_cloud_provider.go:453] Using static instance type t3a.2xlarge
+I1017 15:03:56.245828       1 aws_cloud_provider.go:453] Using static instance type u-3tb1.56xlarge
+I1017 15:03:56.245830       1 aws_cloud_provider.go:453] Using static instance type i2.2xlarge
+I1017 15:03:56.245834       1 aws_cloud_provider.go:453] Using static instance type r6idn.8xlarge
+I1017 15:03:56.245836       1 aws_cloud_provider.go:453] Using static instance type r8g.12xlarge
+I1017 15:03:56.245839       1 aws_cloud_provider.go:453] Using static instance type c4.8xlarge
+I1017 15:03:56.245842       1 aws_cloud_provider.go:453] Using static instance type i2.4xlarge
+I1017 15:03:56.245845       1 aws_cloud_provider.go:453] Using static instance type inf2.24xlarge
+I1017 15:03:56.245848       1 aws_cloud_provider.go:453] Using static instance type r5a.8xlarge
+I1017 15:03:56.245851       1 aws_cloud_provider.go:453] Using static instance type t2.large
+I1017 15:03:56.245854       1 aws_cloud_provider.go:453] Using static instance type x8g.metal-24xl
+I1017 15:03:56.245859       1 aws_cloud_provider.go:453] Using static instance type i7ie.2xlarge
+I1017 15:03:56.245862       1 aws_cloud_provider.go:453] Using static instance type i8g.8xlarge
+I1017 15:03:56.245866       1 aws_cloud_provider.go:453] Using static instance type c5a.8xlarge
+I1017 15:03:56.245869       1 aws_cloud_provider.go:453] Using static instance type i7ie.48xlarge
+I1017 15:03:56.245871       1 aws_cloud_provider.go:453] Using static instance type m8g.metal-24xl
+I1017 15:03:56.245874       1 aws_cloud_provider.go:453] Using static instance type p5.48xlarge
+I1017 15:03:56.245878       1 aws_cloud_provider.go:453] Using static instance type c5d.4xlarge
+I1017 15:03:56.245882       1 aws_cloud_provider.go:453] Using static instance type d3en.2xlarge
+I1017 15:03:56.245885       1 aws_cloud_provider.go:453] Using static instance type g5g.metal
+I1017 15:03:56.245888       1 aws_cloud_provider.go:453] Using static instance type g6e.24xlarge
+I1017 15:03:56.245891       1 aws_cloud_provider.go:453] Using static instance type i8g.16xlarge
+I1017 15:03:56.245895       1 aws_cloud_provider.go:453] Using static instance type inf1.xlarge
+I1017 15:03:56.245898       1 aws_cloud_provider.go:453] Using static instance type z1d.12xlarge
+I1017 15:03:56.245900       1 aws_cloud_provider.go:453] Using static instance type c7gd.2xlarge
+I1017 15:03:56.245903       1 aws_cloud_provider.go:453] Using static instance type m3.xlarge
+I1017 15:03:56.245906       1 aws_cloud_provider.go:453] Using static instance type c5ad.xlarge
+I1017 15:03:56.245908       1 aws_cloud_provider.go:453] Using static instance type c5d.24xlarge
+I1017 15:03:56.245911       1 aws_cloud_provider.go:453] Using static instance type r5d.4xlarge
+I1017 15:03:56.245914       1 aws_cloud_provider.go:453] Using static instance type c5n.18xlarge
+I1017 15:03:56.245917       1 aws_cloud_provider.go:453] Using static instance type r5a.xlarge
+I1017 15:03:56.245920       1 aws_cloud_provider.go:453] Using static instance type r5n.24xlarge
+I1017 15:03:56.245922       1 aws_cloud_provider.go:453] Using static instance type r7a.medium
+I1017 15:03:56.245933       1 aws_cloud_provider.go:453] Using static instance type x2gd.2xlarge
+I1017 15:03:56.245936       1 aws_cloud_provider.go:453] Using static instance type i3.8xlarge
+I1017 15:03:56.245939       1 aws_cloud_provider.go:453] Using static instance type r6in.xlarge
+I1017 15:03:56.245941       1 aws_cloud_provider.go:453] Using static instance type r8g.48xlarge
+I1017 15:03:56.245944       1 aws_cloud_provider.go:453] Using static instance type x1e.32xlarge
+I1017 15:03:56.245946       1 aws_cloud_provider.go:453] Using static instance type c8gd.8xlarge
+I1017 15:03:56.245949       1 aws_cloud_provider.go:453] Using static instance type m8g.24xlarge
+I1017 15:03:56.245952       1 aws_cloud_provider.go:453] Using static instance type r7iz.32xlarge
+I1017 15:03:56.245954       1 aws_cloud_provider.go:453] Using static instance type m5a.12xlarge
+I1017 15:03:56.245958       1 aws_cloud_provider.go:453] Using static instance type c6gd.2xlarge
+I1017 15:03:56.245960       1 aws_cloud_provider.go:453] Using static instance type m5ad.4xlarge
+I1017 15:03:56.245963       1 aws_cloud_provider.go:453] Using static instance type m8gd.xlarge
+I1017 15:03:56.245968       1 aws_cloud_provider.go:453] Using static instance type r5d.8xlarge
+I1017 15:03:56.245971       1 aws_cloud_provider.go:453] Using static instance type c7gd.metal
+I1017 15:03:56.245973       1 aws_cloud_provider.go:453] Using static instance type r5.metal
+I1017 15:03:56.245976       1 aws_cloud_provider.go:453] Using static instance type c5ad.2xlarge
+I1017 15:03:56.245978       1 aws_cloud_provider.go:453] Using static instance type c5d.9xlarge
+I1017 15:03:56.245981       1 aws_cloud_provider.go:453] Using static instance type r7iz.16xlarge
+I1017 15:03:56.245984       1 aws_cloud_provider.go:453] Using static instance type x8g.24xlarge
+I1017 15:03:56.245987       1 aws_cloud_provider.go:453] Using static instance type i4g.16xlarge
+I1017 15:03:56.245990       1 aws_cloud_provider.go:453] Using static instance type mac2.metal
+I1017 15:03:56.245992       1 aws_cloud_provider.go:453] Using static instance type r6a.xlarge
+I1017 15:03:56.245995       1 aws_cloud_provider.go:453] Using static instance type r6a.large
+I1017 15:03:56.246000       1 aws_cloud_provider.go:453] Using static instance type g4ad.16xlarge
+I1017 15:03:56.246003       1 aws_cloud_provider.go:453] Using static instance type r7iz.metal-32xl
+I1017 15:03:56.246006       1 aws_cloud_provider.go:453] Using static instance type d3.8xlarge
+I1017 15:03:56.246008       1 aws_cloud_provider.go:453] Using static instance type c7a.large
+I1017 15:03:56.246011       1 aws_cloud_provider.go:453] Using static instance type m5a.2xlarge
+I1017 15:03:56.246013       1 aws_cloud_provider.go:453] Using static instance type m5ad.16xlarge
+I1017 15:03:56.246017       1 aws_cloud_provider.go:453] Using static instance type r6idn.32xlarge
+I1017 15:03:56.246019       1 aws_cloud_provider.go:453] Using static instance type r8g.medium
+I1017 15:03:56.246022       1 aws_cloud_provider.go:453] Using static instance type a1.2xlarge
+I1017 15:03:56.246025       1 aws_cloud_provider.go:453] Using static instance type m6idn.4xlarge
+I1017 15:03:56.246037       1 aws_cloud_provider.go:453] Using static instance type r5dn.large
+I1017 15:03:56.246043       1 aws_cloud_provider.go:453] Using static instance type r6a.4xlarge
+I1017 15:03:56.246046       1 aws_cloud_provider.go:453] Using static instance type c3.large
+I1017 15:03:56.246048       1 aws_cloud_provider.go:453] Using static instance type c5n.large
+I1017 15:03:56.246051       1 aws_cloud_provider.go:453] Using static instance type h1.2xlarge
+I1017 15:03:56.246054       1 aws_cloud_provider.go:453] Using static instance type i7i.xlarge
+I1017 15:03:56.246058       1 aws_cloud_provider.go:453] Using static instance type m5d.xlarge
+I1017 15:03:56.246061       1 aws_cloud_provider.go:453] Using static instance type m6idn.metal
+I1017 15:03:56.246063       1 aws_cloud_provider.go:453] Using static instance type r5d.24xlarge
+I1017 15:03:56.246066       1 aws_cloud_provider.go:453] Using static instance type r6in.large
+I1017 15:03:56.246070       1 aws_cloud_provider.go:453] Using static instance type c5a.large
+I1017 15:03:56.246072       1 aws_cloud_provider.go:453] Using static instance type m5n.xlarge
+I1017 15:03:56.246075       1 aws_cloud_provider.go:453] Using static instance type m6a.8xlarge
+I1017 15:03:56.246079       1 aws_cloud_provider.go:453] Using static instance type r4.16xlarge
+I1017 15:03:56.246082       1 aws_cloud_provider.go:453] Using static instance type r5.large
+I1017 15:03:56.246085       1 aws_cloud_provider.go:453] Using static instance type r5ad.8xlarge
+I1017 15:03:56.246088       1 aws_cloud_provider.go:453] Using static instance type m4.10xlarge
+I1017 15:03:56.246091       1 aws_cloud_provider.go:453] Using static instance type m5zn.3xlarge
+I1017 15:03:56.246094       1 aws_cloud_provider.go:453] Using static instance type m7a.xlarge
+I1017 15:03:56.246097       1 aws_cloud_provider.go:453] Using static instance type r5d.16xlarge
+I1017 15:03:56.246100       1 aws_cloud_provider.go:453] Using static instance type x8g.2xlarge
+I1017 15:03:56.246103       1 aws_cloud_provider.go:453] Using static instance type f2.6xlarge
+I1017 15:03:56.246105       1 aws_cloud_provider.go:453] Using static instance type m5n.large
+I1017 15:03:56.246108       1 aws_cloud_provider.go:453] Using static instance type r8g.8xlarge
+I1017 15:03:56.246113       1 aws_cloud_provider.go:453] Using static instance type d3.xlarge
+I1017 15:03:56.246116       1 aws_cloud_provider.go:453] Using static instance type i3.4xlarge
+I1017 15:03:56.246119       1 aws_cloud_provider.go:453] Using static instance type is4gen.8xlarge
+I1017 15:03:56.246122       1 aws_cloud_provider.go:453] Using static instance type r7a.48xlarge
+I1017 15:03:56.246125       1 aws_cloud_provider.go:453] Using static instance type g6.16xlarge
+I1017 15:03:56.246128       1 aws_cloud_provider.go:453] Using static instance type m8g.large
+I1017 15:03:56.246131       1 aws_cloud_provider.go:453] Using static instance type r5n.4xlarge
+I1017 15:03:56.246133       1 aws_cloud_provider.go:453] Using static instance type i2.8xlarge
+I1017 15:03:56.246135       1 aws_cloud_provider.go:453] Using static instance type r4.8xlarge
+I1017 15:03:56.246143       1 aws_cloud_provider.go:453] Using static instance type c7gd.12xlarge
+I1017 15:03:56.246147       1 aws_cloud_provider.go:453] Using static instance type c7gd.16xlarge
+I1017 15:03:56.246149       1 aws_cloud_provider.go:453] Using static instance type m6a.4xlarge
+I1017 15:03:56.246155       1 aws_cloud_provider.go:453] Using static instance type c3.4xlarge
+I1017 15:03:56.246158       1 aws_cloud_provider.go:453] Using static instance type c3.8xlarge
+I1017 15:03:56.246160       1 aws_cloud_provider.go:453] Using static instance type d3en.12xlarge
+I1017 15:03:56.246163       1 aws_cloud_provider.go:453] Using static instance type m5zn.12xlarge
+I1017 15:03:56.246166       1 aws_cloud_provider.go:453] Using static instance type m8g.12xlarge
+I1017 15:03:56.246169       1 aws_cloud_provider.go:453] Using static instance type r6gd.metal
+I1017 15:03:56.246171       1 aws_cloud_provider.go:453] Using static instance type m5zn.6xlarge
+I1017 15:03:56.246174       1 aws_cloud_provider.go:453] Using static instance type m7a.2xlarge
+I1017 15:03:56.246177       1 aws_cloud_provider.go:453] Using static instance type r6in.2xlarge
+I1017 15:03:56.246179       1 aws_cloud_provider.go:453] Using static instance type x8g.12xlarge
+I1017 15:03:56.246183       1 aws_cloud_provider.go:453] Using static instance type i7i.metal-24xl
+I1017 15:03:56.246187       1 aws_cloud_provider.go:453] Using static instance type c5ad.8xlarge
+I1017 15:03:56.246191       1 aws_cloud_provider.go:453] Using static instance type i3.large
+I1017 15:03:56.246194       1 aws_cloud_provider.go:453] Using static instance type m5n.8xlarge
+I1017 15:03:56.246197       1 aws_cloud_provider.go:453] Using static instance type r7a.32xlarge
+I1017 15:03:56.246200       1 aws_cloud_provider.go:453] Using static instance type i7i.8xlarge
+I1017 15:03:56.246203       1 aws_cloud_provider.go:453] Using static instance type p3dn.24xlarge
+I1017 15:03:56.246207       1 aws_cloud_provider.go:453] Using static instance type c5.large
+I1017 15:03:56.246210       1 aws_cloud_provider.go:453] Using static instance type t3a.small
+I1017 15:03:56.246213       1 aws_cloud_provider.go:453] Using static instance type r7a.xlarge
+I1017 15:03:56.246216       1 aws_cloud_provider.go:453] Using static instance type d2.xlarge
+I1017 15:03:56.246219       1 aws_cloud_provider.go:453] Using static instance type f1.4xlarge
+I1017 15:03:56.246224       1 aws_cloud_provider.go:453] Using static instance type m5d.16xlarge
+I1017 15:03:56.246227       1 aws_cloud_provider.go:453] Using static instance type r5dn.xlarge
+I1017 15:03:56.246230       1 aws_cloud_provider.go:453] Using static instance type r8gd.metal-48xl
+I1017 15:03:56.246234       1 aws_cloud_provider.go:453] Using static instance type t3a.micro
+I1017 15:03:56.246236       1 aws_cloud_provider.go:453] Using static instance type g6.12xlarge
+I1017 15:03:56.246239       1 aws_cloud_provider.go:453] Using static instance type r5ad.2xlarge
+I1017 15:03:56.246241       1 aws_cloud_provider.go:453] Using static instance type r6a.8xlarge
+I1017 15:03:56.246244       1 aws_cloud_provider.go:453] Using static instance type u7i-8tb.112xlarge
+I1017 15:03:56.246252       1 aws_cloud_provider.go:453] Using static instance type c6gd.xlarge
+I1017 15:03:56.246255       1 aws_cloud_provider.go:453] Using static instance type i7i.48xlarge
+I1017 15:03:56.246258       1 aws_cloud_provider.go:453] Using static instance type m3.2xlarge
+I1017 15:03:56.246263       1 aws_cloud_provider.go:453] Using static instance type g5.2xlarge
+I1017 15:03:56.246266       1 aws_cloud_provider.go:453] Using static instance type inf2.8xlarge
+I1017 15:03:56.246269       1 aws_cloud_provider.go:453] Using static instance type m5ad.2xlarge
+I1017 15:03:56.246272       1 aws_cloud_provider.go:453] Using static instance type x2iedn.8xlarge
+I1017 15:03:56.246274       1 aws_cloud_provider.go:453] Using static instance type m8g.xlarge
+I1017 15:03:56.246276       1 aws_cloud_provider.go:453] Using static instance type r6idn.12xlarge
+I1017 15:03:56.246279       1 aws_cloud_provider.go:453] Using static instance type t3a.large
+I1017 15:03:56.246282       1 aws_cloud_provider.go:453] Using static instance type i7i.12xlarge
+I1017 15:03:56.246285       1 aws_cloud_provider.go:453] Using static instance type mac2-m1ultra.metal
+I1017 15:03:56.246288       1 aws_cloud_provider.go:453] Using static instance type m6idn.large
+I1017 15:03:56.246290       1 aws_cloud_provider.go:453] Using static instance type c7a.xlarge
+I1017 15:03:56.246296       1 aws_cloud_provider.go:453] Using static instance type m7a.4xlarge
+I1017 15:03:56.246298       1 aws_cloud_provider.go:453] Using static instance type m8gd.metal-24xl
+I1017 15:03:56.246301       1 aws_cloud_provider.go:453] Using static instance type r8g.4xlarge
+I1017 15:03:56.246304       1 aws_cloud_provider.go:453] Using static instance type z1d.3xlarge
+I1017 15:03:56.246306       1 aws_cloud_provider.go:453] Using static instance type g4dn.xlarge
+I1017 15:03:56.246309       1 aws_cloud_provider.go:453] Using static instance type m7a.medium
+I1017 15:03:56.246312       1 aws_cloud_provider.go:453] Using static instance type g5g.8xlarge
+I1017 15:03:56.246315       1 aws_cloud_provider.go:453] Using static instance type r7a.24xlarge
+I1017 15:03:56.246318       1 aws_cloud_provider.go:453] Using static instance type m7a.large
+I1017 15:03:56.246320       1 aws_cloud_provider.go:453] Using static instance type t2.medium
+I1017 15:03:56.246323       1 aws_cloud_provider.go:453] Using static instance type z1d.xlarge
+I1017 15:03:56.246326       1 aws_cloud_provider.go:453] Using static instance type c8gd.4xlarge
+I1017 15:03:56.246331       1 aws_cloud_provider.go:453] Using static instance type g5.48xlarge
+I1017 15:03:56.246333       1 aws_cloud_provider.go:453] Using static instance type m5n.2xlarge
+I1017 15:03:56.246336       1 aws_cloud_provider.go:453] Using static instance type m5a.4xlarge
+I1017 15:03:56.246339       1 aws_cloud_provider.go:453] Using static instance type x1.16xlarge
+I1017 15:03:56.246342       1 aws_cloud_provider.go:453] Using static instance type m1.xlarge
+I1017 15:03:56.246345       1 aws_cloud_provider.go:453] Using static instance type z1d.large
+I1017 15:03:56.246348       1 aws_cloud_provider.go:453] Using static instance type dl1.24xlarge
+I1017 15:03:56.246356       1 aws_cloud_provider.go:453] Using static instance type t2.micro
+I1017 15:03:56.246359       1 aws_cloud_provider.go:453] Using static instance type c8gd.2xlarge
+I1017 15:03:56.246361       1 aws_cloud_provider.go:453] Using static instance type m2.4xlarge
+I1017 15:03:56.246364       1 aws_cloud_provider.go:453] Using static instance type r6in.12xlarge
+I1017 15:03:56.246369       1 aws_cloud_provider.go:453] Using static instance type r8gd.16xlarge
+I1017 15:03:56.246372       1 aws_cloud_provider.go:453] Using static instance type m7a.24xlarge
+I1017 15:03:56.246374       1 aws_cloud_provider.go:453] Using static instance type r5dn.16xlarge
+I1017 15:03:56.246378       1 aws_cloud_provider.go:453] Using static instance type c5a.4xlarge
+I1017 15:03:56.246381       1 aws_cloud_provider.go:453] Using static instance type u-24tb1.112xlarge
+I1017 15:03:56.246383       1 aws_cloud_provider.go:453] Using static instance type i8g.48xlarge
+I1017 15:03:56.246387       1 aws_cloud_provider.go:453] Using static instance type m6in.4xlarge
+I1017 15:03:56.246390       1 aws_cloud_provider.go:453] Using static instance type r6a.2xlarge
+I1017 15:03:56.246393       1 aws_cloud_provider.go:453] Using static instance type c7gd.8xlarge
+I1017 15:03:56.246396       1 aws_cloud_provider.go:453] Using static instance type m4.2xlarge
+I1017 15:03:56.246401       1 aws_cloud_provider.go:453] Using static instance type r3.4xlarge
+I1017 15:03:56.246403       1 aws_cloud_provider.go:453] Using static instance type r6gd.16xlarge
+I1017 15:03:56.246407       1 aws_cloud_provider.go:453] Using static instance type c5n.metal
+I1017 15:03:56.246409       1 aws_cloud_provider.go:453] Using static instance type g4ad.xlarge
+I1017 15:03:56.246412       1 aws_cloud_provider.go:453] Using static instance type i8g.metal-24xl
+I1017 15:03:56.246415       1 aws_cloud_provider.go:453] Using static instance type im4gn.8xlarge
+I1017 15:03:56.246417       1 aws_cloud_provider.go:453] Using static instance type inf2.48xlarge
+I1017 15:03:56.246420       1 aws_cloud_provider.go:453] Using static instance type m5n.4xlarge
+I1017 15:03:56.246422       1 aws_cloud_provider.go:453] Using static instance type p5en.48xlarge
+I1017 15:03:56.246425       1 aws_cloud_provider.go:453] Using static instance type a1.medium
+I1017 15:03:56.246428       1 aws_cloud_provider.go:453] Using static instance type i3.metal
+I1017 15:03:56.246432       1 aws_cloud_provider.go:453] Using static instance type m5.16xlarge
+I1017 15:03:56.246437       1 aws_cloud_provider.go:453] Using static instance type r3.2xlarge
+I1017 15:03:56.246439       1 aws_cloud_provider.go:453] Using static instance type r6in.16xlarge
+I1017 15:03:56.246442       1 aws_cloud_provider.go:453] Using static instance type x2gd.12xlarge
+I1017 15:03:56.246444       1 aws_cloud_provider.go:453] Using static instance type is4gen.large
+I1017 15:03:56.246447       1 aws_cloud_provider.go:453] Using static instance type m5.metal
+I1017 15:03:56.246450       1 aws_cloud_provider.go:453] Using static instance type m5dn.xlarge
+I1017 15:03:56.246452       1 aws_cloud_provider.go:453] Using static instance type r7iz.4xlarge
+I1017 15:03:56.246462       1 aws_cloud_provider.go:453] Using static instance type x2gd.4xlarge
+I1017 15:03:56.246465       1 aws_cloud_provider.go:453] Using static instance type c6a.4xlarge
+I1017 15:03:56.246467       1 aws_cloud_provider.go:453] Using static instance type x1e.4xlarge
+I1017 15:03:56.246470       1 aws_cloud_provider.go:453] Using static instance type c7gd.medium
+I1017 15:03:56.246472       1 aws_cloud_provider.go:453] Using static instance type i7i.16xlarge
+I1017 15:03:56.246478       1 aws_cloud_provider.go:453] Using static instance type i7i.metal-48xl
+I1017 15:03:56.246481       1 aws_cloud_provider.go:453] Using static instance type m5.12xlarge
+I1017 15:03:56.246483       1 aws_cloud_provider.go:453] Using static instance type c4.4xlarge
+I1017 15:03:56.246486       1 aws_cloud_provider.go:453] Using static instance type m5ad.12xlarge
+I1017 15:03:56.246489       1 aws_cloud_provider.go:453] Using static instance type c7a.4xlarge
+I1017 15:03:56.246492       1 aws_cloud_provider.go:453] Using static instance type c8gd.xlarge
+I1017 15:03:56.246494       1 aws_cloud_provider.go:453] Using static instance type g5.24xlarge
+I1017 15:03:56.246496       1 aws_cloud_provider.go:453] Using static instance type im4gn.xlarge
+I1017 15:03:56.246499       1 aws_cloud_provider.go:453] Using static instance type m6idn.16xlarge
+I1017 15:03:56.246502       1 aws_cloud_provider.go:453] Using static instance type u-6tb1.56xlarge
+I1017 15:03:56.246505       1 aws_cloud_provider.go:453] Using static instance type u7i-6tb.112xlarge
+I1017 15:03:56.246510       1 aws_cloud_provider.go:453] Using static instance type x2iezn.8xlarge
+I1017 15:03:56.246513       1 aws_cloud_provider.go:453] Using static instance type c4.xlarge
+I1017 15:03:56.246516       1 aws_cloud_provider.go:453] Using static instance type r4.2xlarge
+I1017 15:03:56.246518       1 aws_cloud_provider.go:453] Using static instance type z1d.6xlarge
+I1017 15:03:56.246521       1 aws_cloud_provider.go:453] Using static instance type c5d.xlarge
+I1017 15:03:56.246523       1 aws_cloud_provider.go:453] Using static instance type i7ie.xlarge
+I1017 15:03:56.246526       1 aws_cloud_provider.go:453] Using static instance type m5n.metal
+I1017 15:03:56.246528       1 aws_cloud_provider.go:453] Using static instance type m6a.12xlarge
+I1017 15:03:56.246531       1 aws_cloud_provider.go:453] Using static instance type x2iezn.6xlarge
+I1017 15:03:56.246534       1 aws_cloud_provider.go:453] Using static instance type x8g.48xlarge
+I1017 15:03:56.246539       1 aws_cloud_provider.go:453] Using static instance type m6idn.xlarge
+I1017 15:03:56.246545       1 aws_cloud_provider.go:453] Using static instance type m6in.12xlarge
+I1017 15:03:56.246549       1 aws_cloud_provider.go:453] Using static instance type m8g.8xlarge
+I1017 15:03:56.246553       1 aws_cloud_provider.go:453] Using static instance type c6a.32xlarge
+I1017 15:03:56.246556       1 aws_cloud_provider.go:453] Using static instance type c7gn.large
+I1017 15:03:56.246559       1 aws_cloud_provider.go:453] Using static instance type r5ad.large
+I1017 15:03:56.246562       1 aws_cloud_provider.go:453] Using static instance type c5n.9xlarge
+I1017 15:03:56.246569       1 aws_cloud_provider.go:453] Using static instance type m8g.metal-48xl
+I1017 15:03:56.246572       1 aws_cloud_provider.go:453] Using static instance type g5.12xlarge
+I1017 15:03:56.246576       1 aws_cloud_provider.go:453] Using static instance type t3a.medium
+I1017 15:03:56.246578       1 aws_cloud_provider.go:453] Using static instance type x8g.medium
+I1017 15:03:56.246581       1 aws_cloud_provider.go:453] Using static instance type m7a.48xlarge
+I1017 15:03:56.246586       1 aws_cloud_provider.go:453] Using static instance type r5.12xlarge
+I1017 15:03:56.246590       1 aws_cloud_provider.go:453] Using static instance type r7iz.2xlarge
+I1017 15:03:56.246593       1 aws_cloud_provider.go:453] Using static instance type r8gd.48xlarge
+I1017 15:03:56.246596       1 aws_cloud_provider.go:453] Using static instance type g4dn.16xlarge
+I1017 15:03:56.246600       1 aws_cloud_provider.go:453] Using static instance type g6e.48xlarge
+I1017 15:03:56.246603       1 aws_cloud_provider.go:453] Using static instance type m4.large
+I1017 15:03:56.246605       1 aws_cloud_provider.go:453] Using static instance type r5dn.2xlarge
+I1017 15:03:56.246608       1 aws_cloud_provider.go:453] Using static instance type r8g.2xlarge
+I1017 15:03:56.246610       1 aws_cloud_provider.go:453] Using static instance type c6gd.12xlarge
+I1017 15:03:56.246613       1 aws_cloud_provider.go:453] Using static instance type c5a.xlarge
+I1017 15:03:56.246615       1 aws_cloud_provider.go:453] Using static instance type r6in.24xlarge
+I1017 15:03:56.246621       1 aws_cloud_provider.go:453] Using static instance type g5.8xlarge
+I1017 15:03:56.246623       1 aws_cloud_provider.go:453] Using static instance type im4gn.4xlarge
+I1017 15:03:56.246625       1 aws_cloud_provider.go:453] Using static instance type inf1.2xlarge
+I1017 15:03:56.246628       1 aws_cloud_provider.go:453] Using static instance type c3.xlarge
+I1017 15:03:56.246631       1 aws_cloud_provider.go:453] Using static instance type m6in.metal
+I1017 15:03:56.246634       1 aws_cloud_provider.go:453] Using static instance type a1.4xlarge
+I1017 15:03:56.246636       1 aws_cloud_provider.go:453] Using static instance type c5ad.4xlarge
+I1017 15:03:56.246639       1 aws_cloud_provider.go:453] Using static instance type c6gd.large
+I1017 15:03:56.246642       1 aws_cloud_provider.go:453] Using static instance type r6a.16xlarge
+I1017 15:03:56.246645       1 aws_cloud_provider.go:453] Using static instance type g6e.4xlarge
+I1017 15:03:56.246647       1 aws_cloud_provider.go:453] Using static instance type r5.xlarge
+I1017 15:03:56.246652       1 aws_cloud_provider.go:453] Using static instance type x2iezn.4xlarge
+I1017 15:03:56.246655       1 aws_cloud_provider.go:453] Using static instance type r5dn.12xlarge
+I1017 15:03:56.246658       1 aws_cloud_provider.go:453] Using static instance type trn1.2xlarge
+I1017 15:03:56.246660       1 aws_cloud_provider.go:453] Using static instance type c5ad.16xlarge
+I1017 15:03:56.246663       1 aws_cloud_provider.go:453] Using static instance type r5ad.12xlarge
+I1017 15:03:56.246666       1 aws_cloud_provider.go:453] Using static instance type r5ad.xlarge
+I1017 15:03:56.246673       1 aws_cloud_provider.go:453] Using static instance type m1.medium
+I1017 15:03:56.246677       1 aws_cloud_provider.go:453] Using static instance type m8g.48xlarge
+I1017 15:03:56.246679       1 aws_cloud_provider.go:453] Using static instance type r5b.12xlarge
+I1017 15:03:56.246682       1 aws_cloud_provider.go:453] Using static instance type c6a.xlarge
+I1017 15:03:56.246685       1 aws_cloud_provider.go:453] Using static instance type i8g.4xlarge
+I1017 15:03:56.246689       1 aws_cloud_provider.go:453] Using static instance type m5a.24xlarge
+I1017 15:03:56.246692       1 aws_cloud_provider.go:453] Using static instance type trn1n.32xlarge
+I1017 15:03:56.246695       1 aws_cloud_provider.go:453] Using static instance type d3.4xlarge
+I1017 15:03:56.246698       1 aws_cloud_provider.go:453] Using static instance type m5.large
+I1017 15:03:56.246700       1 aws_cloud_provider.go:453] Using static instance type m6a.xlarge
+I1017 15:03:56.246704       1 aws_cloud_provider.go:453] Using static instance type r5b.8xlarge
+I1017 15:03:56.246707       1 aws_cloud_provider.go:453] Using static instance type hpc7g.16xlarge
+I1017 15:03:56.246709       1 aws_cloud_provider.go:453] Using static instance type x8g.metal-48xl
+I1017 15:03:56.246712       1 aws_cloud_provider.go:453] Using static instance type c5.12xlarge
+I1017 15:03:56.246715       1 aws_cloud_provider.go:453] Using static instance type c6a.large
+I1017 15:03:56.246717       1 aws_cloud_provider.go:453] Using static instance type u7i-12tb.224xlarge
+I1017 15:03:56.246723       1 aws_cloud_provider.go:453] Using static instance type m5ad.large
+I1017 15:03:56.246726       1 aws_cloud_provider.go:453] Using static instance type r5.24xlarge
+I1017 15:03:56.246730       1 aws_cloud_provider.go:453] Using static instance type c5.9xlarge
+I1017 15:03:56.246734       1 aws_cloud_provider.go:453] Using static instance type c6a.48xlarge
+I1017 15:03:56.246737       1 aws_cloud_provider.go:453] Using static instance type m7a.8xlarge
+I1017 15:03:56.246739       1 aws_cloud_provider.go:453] Using static instance type r5d.xlarge
+I1017 15:03:56.246742       1 aws_cloud_provider.go:453] Using static instance type c5d.large
+I1017 15:03:56.246745       1 aws_cloud_provider.go:453] Using static instance type m5.24xlarge
+I1017 15:03:56.246748       1 aws_cloud_provider.go:453] Using static instance type m5zn.large
+I1017 15:03:56.246751       1 aws_cloud_provider.go:453] Using static instance type m6in.large
+I1017 15:03:56.246753       1 aws_cloud_provider.go:453] Using static instance type r6gd.12xlarge
+I1017 15:03:56.246758       1 aws_cloud_provider.go:453] Using static instance type r5.16xlarge
+I1017 15:03:56.246762       1 aws_cloud_provider.go:453] Using static instance type g6.8xlarge
+I1017 15:03:56.246765       1 aws_cloud_provider.go:453] Using static instance type i8g.12xlarge
+I1017 15:03:56.246767       1 aws_cloud_provider.go:453] Using static instance type c7a.12xlarge
+I1017 15:03:56.246769       1 aws_cloud_provider.go:453] Using static instance type i7ie.metal-48xl
+I1017 15:03:56.246772       1 aws_cloud_provider.go:453] Using static instance type x2iedn.4xlarge
+I1017 15:03:56.246780       1 aws_cloud_provider.go:453] Using static instance type r6a.24xlarge
+I1017 15:03:56.246783       1 aws_cloud_provider.go:453] Using static instance type c5ad.24xlarge
+I1017 15:03:56.246786       1 aws_cloud_provider.go:453] Using static instance type c7gn.medium
+I1017 15:03:56.246789       1 aws_cloud_provider.go:453] Using static instance type m5d.4xlarge
+I1017 15:03:56.246791       1 aws_cloud_provider.go:453] Using static instance type m8gd.2xlarge
+I1017 15:03:56.246796       1 aws_cloud_provider.go:453] Using static instance type r5a.12xlarge
+I1017 15:03:56.246799       1 aws_cloud_provider.go:453] Using static instance type u-6tb1.112xlarge
+I1017 15:03:56.246801       1 aws_cloud_provider.go:453] Using static instance type gr6.4xlarge
+I1017 15:03:56.246803       1 aws_cloud_provider.go:453] Using static instance type m1.large
+I1017 15:03:56.246806       1 aws_cloud_provider.go:453] Using static instance type m5dn.16xlarge
+I1017 15:03:56.246809       1 aws_cloud_provider.go:453] Using static instance type i7i.large
+I1017 15:03:56.246811       1 aws_cloud_provider.go:453] Using static instance type r7a.8xlarge
+I1017 15:03:56.246813       1 aws_cloud_provider.go:453] Using static instance type im4gn.2xlarge
+I1017 15:03:56.246816       1 aws_cloud_provider.go:453] Using static instance type m6in.16xlarge
+I1017 15:03:56.246820       1 aws_cloud_provider.go:453] Using static instance type p4d.24xlarge
+I1017 15:03:56.246822       1 aws_cloud_provider.go:453] Using static instance type c5d.18xlarge
+I1017 15:03:56.246828       1 aws_cloud_provider.go:453] Using static instance type d3en.8xlarge
+I1017 15:03:56.246830       1 aws_cloud_provider.go:453] Using static instance type m5.8xlarge
+I1017 15:03:56.246833       1 aws_cloud_provider.go:453] Using static instance type r6in.4xlarge
+I1017 15:03:56.246836       1 aws_cloud_provider.go:453] Using static instance type c6gd.metal
+I1017 15:03:56.246838       1 aws_cloud_provider.go:453] Using static instance type c8gd.16xlarge
+I1017 15:03:56.246842       1 aws_cloud_provider.go:453] Using static instance type r6gd.8xlarge
+I1017 15:03:56.246844       1 aws_cloud_provider.go:453] Using static instance type vt1.3xlarge
+I1017 15:03:56.246847       1 aws_cloud_provider.go:453] Using static instance type m5d.24xlarge
+I1017 15:03:56.246851       1 aws_cloud_provider.go:453] Using static instance type x1e.2xlarge
+I1017 15:03:56.246854       1 aws_cloud_provider.go:453] Using static instance type g6e.12xlarge
+I1017 15:03:56.246857       1 aws_cloud_provider.go:453] Using static instance type m7a.12xlarge
+I1017 15:03:56.246860       1 aws_cloud_provider.go:453] Using static instance type x2gd.16xlarge
+I1017 15:03:56.246865       1 aws_cloud_provider.go:453] Using static instance type r6gd.large
+I1017 15:03:56.246868       1 aws_cloud_provider.go:453] Using static instance type r8g.metal-24xl
+I1017 15:03:56.246871       1 aws_cloud_provider.go:453] Using static instance type g5.xlarge
+I1017 15:03:56.246873       1 aws_cloud_provider.go:453] Using static instance type r5dn.metal
+I1017 15:03:56.246876       1 aws_cloud_provider.go:453] Using static instance type r7iz.metal-16xl
+I1017 15:03:56.246883       1 aws_cloud_provider.go:453] Using static instance type a1.large
+I1017 15:03:56.246886       1 aws_cloud_provider.go:453] Using static instance type m2.2xlarge
+I1017 15:03:56.246889       1 aws_cloud_provider.go:453] Using static instance type m5dn.2xlarge
+I1017 15:03:56.246892       1 aws_cloud_provider.go:453] Using static instance type r8gd.12xlarge
+I1017 15:03:56.246895       1 aws_cloud_provider.go:453] Using static instance type u7in-32tb.224xlarge
+I1017 15:03:56.246898       1 aws_cloud_provider.go:453] Using static instance type c7a.48xlarge
+I1017 15:03:56.246903       1 aws_cloud_provider.go:453] Using static instance type m3.large
+I1017 15:03:56.246906       1 aws_cloud_provider.go:453] Using static instance type m5dn.4xlarge
+I1017 15:03:56.246909       1 aws_cloud_provider.go:453] Using static instance type r6idn.xlarge
+I1017 15:03:56.246911       1 aws_cloud_provider.go:453] Using static instance type r8gd.large
+I1017 15:03:56.246914       1 aws_cloud_provider.go:453] Using static instance type r8gd.xlarge
+I1017 15:03:56.246917       1 aws_cloud_provider.go:453] Using static instance type x2iedn.2xlarge
+I1017 15:03:56.246919       1 aws_cloud_provider.go:453] Using static instance type r7a.large
+I1017 15:03:56.246922       1 aws_cloud_provider.go:453] Using static instance type c6gd.8xlarge
+I1017 15:03:56.246925       1 aws_cloud_provider.go:453] Using static instance type c7gn.metal
+I1017 15:03:56.246927       1 aws_cloud_provider.go:453] Using static instance type c6a.12xlarge
+I1017 15:03:56.246930       1 aws_cloud_provider.go:453] Using static instance type c4.large
+I1017 15:03:56.246935       1 aws_cloud_provider.go:453] Using static instance type g6e.xlarge
+I1017 15:03:56.246938       1 aws_cloud_provider.go:453] Using static instance type m5ad.xlarge
+I1017 15:03:56.246941       1 aws_cloud_provider.go:453] Using static instance type m5a.16xlarge
+I1017 15:03:56.247059       1 aws_cloud_provider.go:453] Using static instance type m5a.xlarge
+I1017 15:03:56.247062       1 aws_cloud_provider.go:453] Using static instance type r3.large
+I1017 15:03:56.247066       1 aws_cloud_provider.go:453] Using static instance type r8g.16xlarge
+I1017 15:03:56.247068       1 aws_cloud_provider.go:453] Using static instance type x2iedn.16xlarge
+I1017 15:03:56.247071       1 aws_cloud_provider.go:453] Using static instance type i4g.4xlarge
+I1017 15:03:56.247074       1 aws_cloud_provider.go:453] Using static instance type mac2-m2pro.metal
+I1017 15:03:56.247076       1 aws_cloud_provider.go:453] Using static instance type i7ie.18xlarge
+I1017 15:03:56.247079       1 aws_cloud_provider.go:453] Using static instance type m8g.16xlarge
+I1017 15:03:56.247084       1 aws_cloud_provider.go:453] Using static instance type r5n.metal
+I1017 15:03:56.247086       1 aws_cloud_provider.go:453] Using static instance type c6a.metal
+I1017 15:03:56.247090       1 aws_cloud_provider.go:453] Using static instance type r5dn.4xlarge
+I1017 15:03:56.247092       1 aws_cloud_provider.go:453] Using static instance type r6gd.medium
+I1017 15:03:56.247095       1 aws_cloud_provider.go:453] Using static instance type g4dn.12xlarge
+I1017 15:03:56.247106       1 aws_cloud_provider.go:453] Using static instance type m6a.metal
+I1017 15:03:56.247108       1 aws_cloud_provider.go:453] Using static instance type p3.2xlarge
+I1017 15:03:56.247111       1 aws_cloud_provider.go:453] Using static instance type r5a.16xlarge
+I1017 15:03:56.247114       1 aws_cloud_provider.go:453] Using static instance type r5b.large
+I1017 15:03:56.247117       1 aws_cloud_provider.go:453] Using static instance type m7a.metal-48xl
+I1017 15:03:56.247120       1 aws_cloud_provider.go:453] Using static instance type m8gd.metal-48xl
+I1017 15:03:56.247125       1 aws_cloud_provider.go:453] Using static instance type r5ad.4xlarge
+I1017 15:03:56.247127       1 aws_cloud_provider.go:453] Using static instance type x8g.large
+I1017 15:03:56.247131       1 aws_cloud_provider.go:453] Using static instance type d3en.xlarge
+I1017 15:03:56.247133       1 aws_cloud_provider.go:453] Using static instance type t2.xlarge
+I1017 15:03:56.247136       1 aws_cloud_provider.go:453] Using static instance type g4ad.2xlarge
+I1017 15:03:56.247139       1 aws_cloud_provider.go:453] Using static instance type r5a.24xlarge
+I1017 15:03:56.247143       1 aws_cloud_provider.go:453] Using static instance type r7a.16xlarge
+I1017 15:03:56.247146       1 aws_cloud_provider.go:453] Using static instance type g6.xlarge
+I1017 15:03:56.247232       1 aws_cloud_provider.go:463] Successfully load 924 EC2 Instance Types [m6gd.large m6i.large c6gn.2xlarge r5ad.xlarge c8gn.24xlarge r5n.2xlarge m6idn.4xlarge c6gn.4xlarge i7i.24xlarge d3en.2xlarge a1.2xlarge u7i-12tb.224xlarge m6i.8xlarge c6i.metal r6gd.2xlarge m7gd.metal r8g.2xlarge m6g.metal r6g.12xlarge r7i.4xlarge dl1.24xlarge r5d.large r4.16xlarge c3.4xlarge m6gd.8xlarge r6a.metal c6a.16xlarge m5zn.3xlarge i3.4xlarge c6in.8xlarge c6i.xlarge hpc7g.16xlarge c8g.large c6id.24xlarge t4g.medium m4.16xlarge m5n.xlarge r7iz.12xlarge c5n.large c3.8xlarge m6i.16xlarge m7g.metal c5n.4xlarge t3a.medium r6i.2xlarge m6a.4xlarge z1d.6xlarge i3.large m6a.large c8gn.xlarge m6id.8xlarge c7gd.large m8g.metal-24xl c5.12xlarge i4g.16xlarge c6in.12xlarge r5n.xlarge c7gd.2xlarge c5.large inf2.xlarge m7a.metal-48xl c6in.metal m5a.8xlarge g4dn.metal g6e.24xlarge g5.2xlarge x2iedn.xlarge m7gd.medium c6gn.12xlarge r7i.metal-24xl m5zn.2xlarge i4g.8xlarge c7g.2xlarge r7gd.12xlarge c6gd.4xlarge i4i.xlarge c8gn.medium r6gd.metal x2iedn.2xlarge t3.micro r5ad.8xlarge r5.16xlarge m6id.metal m6g.4xlarge c5n.xlarge x2iezn.12xlarge m5ad.xlarge g6.xlarge c6g.12xlarge r5dn.8xlarge m4.10xlarge r6in.2xlarge c6i.8xlarge c6g.16xlarge p3.16xlarge a1.metal i3.metal c6a.4xlarge c8gd.xlarge m7gd.4xlarge m4.4xlarge r5d.xlarge c5d.18xlarge g5.xlarge i4g.4xlarge c6gd.medium d3.2xlarge c7a.24xlarge c7gd.xlarge x2iezn.4xlarge m7i.large x8g.4xlarge m5.2xlarge c6a.24xlarge i3.8xlarge x8g.metal-48xl c7i.16xlarge m6g.2xlarge c6g.8xlarge i7i.xlarge g5.24xlarge r6in.24xlarge i4i.16xlarge m6a.48xlarge m8g.2xlarge p3.8xlarge r6in.large is4gen.xlarge g6.24xlarge t1.micro inf2.24xlarge r7g.medium m7a.medium r6i.4xlarge i4i.2xlarge c7a.metal-48xl t2.nano r5dn.large r6id.12xlarge c7i.24xlarge m6i.12xlarge i8g.xlarge m6idn.8xlarge r6a.large m7a.large c6g.metal c5a.2xlarge x2gd.medium r5.metal r6i.large m5a.4xlarge m5.8xlarge r5dn.4xlarge t4g.2xlarge t3a.xlarge x1e.8xlarge h1.4xlarge t2.large r7iz.16xlarge c8g.2xlarge m6i.24xlarge c7gn.xlarge i2.8xlarge t3.large c5a.xlarge m3.large r8g.16xlarge c7a.32xlarge m5dn.12xlarge m6in.metal d3en.8xlarge mac2-m2pro.metal m5zn.metal c5n.18xlarge mac2.metal c7gd.16xlarge m5dn.xlarge r6a.24xlarge x8g.large t2.2xlarge is4gen.4xlarge g4ad.16xlarge r6in.12xlarge is4gen.8xlarge r5.12xlarge c6a.large i7ie.18xlarge m2.xlarge m7i.48xlarge r8g.metal-24xl x2idn.32xlarge r8gd.48xlarge r6a.16xlarge c7i.metal-48xl i7ie.3xlarge z1d.xlarge m6in.12xlarge c5ad.16xlarge c7gn.2xlarge m6a.16xlarge p3.2xlarge r7g.16xlarge m8gd.24xlarge d3en.4xlarge c8gd.metal-48xl d2.xlarge g6.12xlarge m5n.metal c6a.32xlarge x8g.xlarge c7a.48xlarge c6gn.xlarge c6i.2xlarge c6in.32xlarge t4g.large g6e.8xlarge r5n.4xlarge d3.4xlarge r6i.8xlarge r5b.4xlarge r8gd.2xlarge i7ie.metal-24xl m7a.2xlarge m8g.48xlarge m7i.24xlarge r5.2xlarge m5a.12xlarge r7gd.medium m7a.32xlarge r6idn.32xlarge c5a.large gr6.4xlarge m5d.large m5dn.8xlarge c7g.16xlarge c7i-flex.4xlarge m5n.24xlarge m8gd.xlarge c6id.12xlarge c8gd.24xlarge c5a.24xlarge c5.xlarge r5n.metal m7g.2xlarge r8gd.medium i7i.48xlarge c8gn.48xlarge i3.2xlarge p5.48xlarge mac2-m1ultra.metal c6i.4xlarge r7gd.2xlarge m7g.16xlarge m5a.2xlarge i7i.8xlarge r7a.large h1.8xlarge c8g.24xlarge m6i.4xlarge r6id.8xlarge c8gn.8xlarge c8gn.4xlarge r7a.metal-48xl r5.8xlarge z1d.2xlarge r6in.32xlarge g5.12xlarge c5ad.24xlarge r6i.12xlarge c7g.large is4gen.2xlarge c6a.metal m6gd.4xlarge gr6.8xlarge r8g.metal-48xl r5d.8xlarge trn1.32xlarge m5dn.24xlarge c6i.16xlarge r6idn.4xlarge c6gd.2xlarge m8gd.metal-24xl r5dn.12xlarge i7ie.metal-48xl m7i-flex.8xlarge m6a.2xlarge d2.2xlarge m6in.4xlarge im4gn.xlarge m6g.medium z1d.12xlarge c6in.4xlarge m5a.large r3.4xlarge c7i-flex.16xlarge r6g.8xlarge r7i.48xlarge m5d.metal d2.4xlarge r7gd.16xlarge r7g.metal c7i-flex.12xlarge p3dn.24xlarge m7gd.12xlarge c7gn.8xlarge g4dn.16xlarge m6in.16xlarge c7a.16xlarge h1.2xlarge t3a.large r7i.xlarge c4.2xlarge t3.medium c6id.xlarge x1e.16xlarge r4.large m6in.2xlarge g6e.4xlarge r6id.32xlarge i3en.metal c6gd.16xlarge x1e.xlarge c8gd.large m5ad.16xlarge r3.2xlarge m7gd.large r6g.metal r6a.8xlarge r7i.16xlarge m7i.12xlarge m5d.2xlarge m5dn.large x2iedn.32xlarge c5ad.12xlarge c7a.xlarge m8g.8xlarge r7g.large r5b.metal x2gd.16xlarge c6a.12xlarge c6i.24xlarge m6gd.medium c6id.2xlarge m7a.xlarge r5dn.16xlarge m7a.8xlarge m5zn.large r5ad.16xlarge f2.12xlarge c7gn.metal r7g.4xlarge m3.medium i4i.8xlarge m8gd.16xlarge x8g.medium g5g.16xlarge r5ad.large m1.medium g4dn.12xlarge m6id.32xlarge r5a.large f2.48xlarge r7a.4xlarge i7ie.6xlarge c3.large g4dn.xlarge g4ad.xlarge g6.4xlarge m8gd.2xlarge r5ad.4xlarge m7g.12xlarge c7g.8xlarge c7i.2xlarge i4g.2xlarge u-9tb1.112xlarge c6a.48xlarge r8g.4xlarge x1e.4xlarge trn1n.32xlarge c8g.metal-24xl m7g.large t3.small is4gen.large m6in.24xlarge g5g.metal m8g.xlarge c5a.4xlarge r7a.xlarge i3en.2xlarge r6gd.xlarge m5d.16xlarge u7i-8tb.112xlarge r4.2xlarge r5b.12xlarge i8g.4xlarge u7in-32tb.224xlarge i4i.metal c8gn.2xlarge r7i.2xlarge m8gd.48xlarge r5.xlarge r6gd.medium m7i.2xlarge m7i.16xlarge m7gd.16xlarge g6e.16xlarge m6idn.24xlarge r8g.12xlarge c8gd.16xlarge c8gd.4xlarge r5dn.metal a1.large r7a.16xlarge i4i.24xlarge r7i.12xlarge r7gd.metal r6in.8xlarge r6g.2xlarge hpc7g.4xlarge g6.48xlarge t2.medium c5ad.xlarge r6id.16xlarge m7i-flex.large m6id.large r5b.24xlarge m7i.metal-48xl m7a.16xlarge c3.2xlarge m6a.8xlarge c6in.xlarge m7i.xlarge x8g.16xlarge i7i.metal-24xl t3.nano inf1.24xlarge m5zn.xlarge i7i.4xlarge r6idn.16xlarge i7ie.24xlarge m7a.12xlarge r6i.metal r7iz.8xlarge inf2.8xlarge m5dn.16xlarge r8gd.12xlarge r7gd.large i3en.xlarge c7a.2xlarge i4g.large m6idn.2xlarge c5a.16xlarge i8g.24xlarge m6a.32xlarge m5d.12xlarge g5g.xlarge m5ad.8xlarge r5b.2xlarge m6idn.large m5ad.12xlarge inf1.2xlarge r6g.large m7g.4xlarge c6g.medium c5d.2xlarge r7a.32xlarge i8g.12xlarge r7i.metal-48xl m6gd.12xlarge m5dn.2xlarge r7g.xlarge g5g.8xlarge c7i.4xlarge m5ad.24xlarge a1.medium c6in.2xlarge t2.small r8g.24xlarge i3.xlarge u-24tb1.112xlarge c7a.12xlarge r7iz.metal-16xl r6i.24xlarge c7i-flex.xlarge r5n.16xlarge m5n.large c7a.4xlarge t4g.nano m6i.metal m5a.16xlarge f1.16xlarge m5.4xlarge r6g.16xlarge c8g.metal-48xl r6idn.xlarge r6id.24xlarge m6in.8xlarge r7a.24xlarge r8gd.16xlarge m4.large r7i.large r7a.12xlarge m7gd.8xlarge i3en.6xlarge r7gd.8xlarge m4.xlarge r5.large r5dn.xlarge m2.2xlarge m7i-flex.16xlarge c6id.metal c6gn.medium r3.xlarge c4.8xlarge r5a.8xlarge r5dn.24xlarge c6a.2xlarge m3.xlarge c7gn.medium c6in.large x2gd.xlarge m6idn.32xlarge m3.2xlarge g5.8xlarge g4ad.2xlarge c7i.12xlarge d2.8xlarge m8g.12xlarge m5n.16xlarge m8g.4xlarge r4.xlarge c4.large c6in.24xlarge c6g.large m1.small c5.24xlarge x2iezn.8xlarge c6g.2xlarge trn1.2xlarge i3en.12xlarge r7g.12xlarge u7in-16tb.224xlarge c5ad.2xlarge i7i.12xlarge m7a.24xlarge x2iezn.6xlarge hpc7g.8xlarge x2gd.2xlarge c4.4xlarge c8gn.16xlarge g4ad.8xlarge m5dn.metal a1.xlarge r5d.2xlarge x1e.32xlarge c7gd.12xlarge c5d.xlarge r5dn.2xlarge mac1.metal r6gd.4xlarge x2gd.metal inf1.xlarge c7i.48xlarge g4dn.8xlarge i4g.xlarge c5d.24xlarge r5ad.12xlarge c8g.48xlarge m6i.xlarge c5.18xlarge x8g.8xlarge r5d.16xlarge g6e.xlarge c7i-flex.8xlarge c6in.16xlarge c7i-flex.large r5d.12xlarge r7iz.32xlarge c7i-flex.2xlarge m7i-flex.xlarge c8gd.48xlarge r7iz.xlarge m5d.8xlarge r6a.4xlarge x2gd.4xlarge m5a.24xlarge r6id.xlarge r6i.xlarge m7gd.2xlarge m6a.24xlarge f2.6xlarge r7g.2xlarge i4i.32xlarge im4gn.16xlarge m8gd.medium c6gd.metal inf2.48xlarge c6gd.large m6id.16xlarge g5.4xlarge i8g.8xlarge r5d.24xlarge c5.4xlarge im4gn.large g4ad.4xlarge r3.8xlarge c7gd.medium m5zn.6xlarge c6gn.8xlarge m6idn.16xlarge m6gd.metal r6id.4xlarge c7gn.4xlarge r6gd.large u-12tb1.112xlarge c5ad.8xlarge r6idn.12xlarge f1.2xlarge r6a.xlarge m7i.metal-24xl c7gn.16xlarge i2.4xlarge t3a.nano x2gd.large r7a.medium x1.16xlarge r5b.large d3en.6xlarge m6idn.metal t3a.micro c8gd.2xlarge x2iezn.2xlarge p5en.48xlarge x2iedn.metal c1.medium t3a.2xlarge m6a.metal m6id.2xlarge r6g.xlarge r8g.medium x8g.2xlarge r6g.4xlarge c8g.12xlarge m8gd.4xlarge r6idn.24xlarge c8gn.large g5g.4xlarge r7iz.large m5n.8xlarge c5d.large m5.xlarge c8gd.8xlarge c6gd.xlarge m5ad.2xlarge m5d.24xlarge m6g.16xlarge r4.4xlarge m5n.2xlarge m6a.xlarge m5ad.large c7g.12xlarge m6id.12xlarge i8g.large m1.xlarge g6.8xlarge p4de.24xlarge r6in.16xlarge g6e.48xlarge r7a.8xlarge m8gd.metal-48xl d3en.xlarge c6gn.16xlarge t3.2xlarge i7ie.12xlarge t2.micro t3.xlarge inf1.6xlarge r6idn.2xlarge r5n.24xlarge m6a.12xlarge x2iedn.4xlarge m8gd.large c5d.4xlarge m7i-flex.2xlarge r6id.metal r6i.32xlarge c7gn.12xlarge u-3tb1.56xlarge c8g.8xlarge m6id.4xlarge c5.metal x2idn.24xlarge x2idn.16xlarge c6id.4xlarge d3en.12xlarge c7i.metal-24xl r6in.metal f1.4xlarge m7a.48xlarge r6a.2xlarge i8g.metal-24xl m5n.4xlarge c6gd.12xlarge c6id.8xlarge i7ie.large r5a.4xlarge x8g.48xlarge m6g.xlarge t2.xlarge c6gn.large r5n.large x2gd.8xlarge i7i.metal-48xl x2idn.metal m5n.12xlarge i2.2xlarge c6i.large g6.2xlarge m8g.16xlarge i3.16xlarge m8gd.8xlarge c8gd.12xlarge r4.8xlarge im4gn.8xlarge m7g.8xlarge is4gen.medium a1.4xlarge c8gn.12xlarge r6a.48xlarge c5a.12xlarge c7g.4xlarge m6i.32xlarge m6g.12xlarge x8g.metal-24xl c5n.9xlarge c6i.32xlarge m7g.medium c3.xlarge r5a.12xlarge c7g.medium t4g.xlarge i3en.large r5b.8xlarge r5.24xlarge g6.16xlarge r7gd.4xlarge r8gd.large x2iedn.16xlarge r5a.24xlarge g5g.2xlarge m8g.24xlarge p4d.24xlarge c5ad.large u-18tb1.112xlarge m5.16xlarge x1e.2xlarge r6in.xlarge z1d.3xlarge i7ie.2xlarge c7a.large m6in.large m5d.4xlarge r7a.2xlarge c8gd.metal-24xl x2iedn.24xlarge r8g.large m5.metal c5.9xlarge c5.2xlarge r5d.4xlarge r7iz.metal-32xl c7gn.large m6idn.12xlarge t4g.small r8g.xlarge g4dn.4xlarge r8g.48xlarge c5n.metal u-6tb1.56xlarge c6id.32xlarge m8g.large r7i.24xlarge r5d.metal z1d.metal m6id.xlarge m6g.8xlarge m8gd.12xlarge r8gd.24xlarge r7a.48xlarge r6gd.16xlarge m7g.xlarge r8gd.4xlarge r6i.16xlarge r7iz.2xlarge r8gd.metal-48xl i7ie.xlarge c1.xlarge r5a.xlarge m8g.metal-48xl c6gd.8xlarge m7i-flex.12xlarge m6gd.16xlarge m6in.32xlarge i8g.48xlarge m6idn.xlarge r6id.large r6idn.8xlarge vt1.6xlarge x2gd.12xlarge r7gd.xlarge r7g.8xlarge r5a.2xlarge r5n.12xlarge c4.xlarge m6i.2xlarge c6a.8xlarge i2.xlarge c7gd.8xlarge r6gd.12xlarge g6e.12xlarge r5a.16xlarge m6gd.xlarge r6g.medium c5n.2xlarge x2iezn.metal x8g.24xlarge m2.4xlarge m7gd.xlarge r7i.8xlarge c7gd.4xlarge c5ad.4xlarge c7g.metal d3.xlarge i3en.3xlarge c8g.medium m7i-flex.4xlarge m6id.24xlarge c6g.4xlarge r6gd.8xlarge m7i.8xlarge c5d.metal c5d.9xlarge x8g.12xlarge r5ad.24xlarge m5ad.4xlarge r8g.8xlarge c7g.xlarge t3a.small i7i.16xlarge i7i.large t4g.micro m6gd.2xlarge r8gd.8xlarge m5zn.12xlarge z1d.large m1.large m5a.xlarge c6i.12xlarge r5.4xlarge r6idn.large i8g.16xlarge c6a.xlarge r8gd.metal-24xl r6in.4xlarge i4i.4xlarge c7i.8xlarge r5n.8xlarge m5.large r8gd.xlarge c8g.xlarge c7gd.metal im4gn.4xlarge vt1.3xlarge r6a.12xlarge c6id.16xlarge i8g.2xlarge c7a.medium r5ad.2xlarge g5.48xlarge i4i.large c8g.16xlarge m4.2xlarge r7iz.4xlarge vt1.24xlarge r5b.xlarge c7i.large m5.12xlarge im4gn.2xlarge c7i.xlarge g6e.2xlarge r3.large i4i.12xlarge r5b.16xlarge h1.16xlarge c5d.12xlarge c7a.8xlarge mac2-m2.metal c6g.xlarge i3en.24xlarge r6id.2xlarge m6in.xlarge g5.16xlarge i7i.2xlarge u7in-24tb.224xlarge i7ie.48xlarge x2iedn.8xlarge c6id.large c8g.4xlarge g4dn.2xlarge m7a.4xlarge m5.24xlarge m6g.large d3.8xlarge m5dn.4xlarge m7i.4xlarge c8gd.medium m5d.xlarge u-6tb1.112xlarge r6a.32xlarge r6idn.metal x1.32xlarge m8g.medium u7i-6tb.112xlarge c5a.8xlarge]
+I1017 15:03:56.445008       1 aws_manager.go:79] AWS SDK Version: 1.48.7
+I1017 15:03:56.445163       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I1017 15:03:56.445185       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/enabled: k8s.io/cluster-autoscaler/staging_order_system:]
+I1017 15:03:56.899994       1 auto_scaling_groups.go:165] Registering ASG eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183
+I1017 15:03:56.900026       1 aws_wrapper.go:710] 0 launch configurations to query
+I1017 15:03:56.900031       1 aws_wrapper.go:711] 0 launch templates to query
+I1017 15:03:56.900037       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I1017 15:03:56.900042       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I1017 15:03:56.900048       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I1017 15:03:56.900059       1 auto_scaling_groups.go:487] Extracted autoscaling options from "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183" ASG tags: map[]
+I1017 15:03:56.900068       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2025-10-17 15:04:56.900065824 +0000 UTC m=+85.454870115
+I1017 15:03:56.900144       1 static_autoscaler.go:146] Creating new static autoscaler with opts: {{0.5 0.5 10m0s 20m0s 15m0s false false false} 0 320000 0 6871947673600000 0 [] [asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/staging_order_system] binpacking least-waste   false 600 [] 45 3 true false  aws [] false true true 10m0s 0s 3m0s false 30 0.1 50 30s <nil> 2m0s true cluster-autoscaler-status false kube-system  5m0s -10 false 0s 10 3s 2m0s [] [] [] [] false {1 5s  0xc000479fc8 false} {  application/vnd.kubernetes.protobuf 10 5} false true false true cluster-autoscaler 5m0s 30m0s 3h0m0s 10 1 false 1000 10s 5m0s 0s true true true 0 1h0m0s 5s {0.05 0.05 0.015} false map[] false false 1m0s 10m0s 1000 false 10 10s false false false 16  10m0s 15m0s false false :8085 false false 10s false 87600h0m0s false 5000 0s false false}
+I1017 15:03:56.900396       1 main.go:272] Initializing resource informers, blocking until caches are synced
+I1017 15:03:56.900535       1 reflector.go:358] "Starting reflector" type="*v1.StorageClass" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.900546       1 reflector.go:404] "Listing and watching" type="*v1.StorageClass" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.900596       1 reflector.go:358] "Starting reflector" type="*v1.PersistentVolume" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.900650       1 reflector.go:404] "Listing and watching" type="*v1.PersistentVolume" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.900811       1 reflector.go:358] "Starting reflector" type="*v1.VolumeAttachment" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.900828       1 reflector.go:404] "Listing and watching" type="*v1.VolumeAttachment" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.900935       1 reflector.go:358] "Starting reflector" type="*v1.Pod" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.900947       1 reflector.go:404] "Listing and watching" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901033       1 reflector.go:358] "Starting reflector" type="*v1.CSINode" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901045       1 reflector.go:404] "Listing and watching" type="*v1.CSINode" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901155       1 reflector.go:358] "Starting reflector" type="*v1.CSIDriver" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901167       1 reflector.go:404] "Listing and watching" type="*v1.CSIDriver" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901240       1 reflector.go:358] "Starting reflector" type="*v1.CSIStorageCapacity" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901250       1 reflector.go:404] "Listing and watching" type="*v1.CSIStorageCapacity" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901320       1 reflector.go:358] "Starting reflector" type="*v1.ReplicationController" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901330       1 reflector.go:404] "Listing and watching" type="*v1.ReplicationController" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901442       1 reflector.go:358] "Starting reflector" type="*v1.Node" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901453       1 reflector.go:404] "Listing and watching" type="*v1.Node" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901542       1 reflector.go:358] "Starting reflector" type="*v1.Job" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901553       1 reflector.go:404] "Listing and watching" type="*v1.Job" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901657       1 reflector.go:358] "Starting reflector" type="*v1.PersistentVolumeClaim" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901670       1 reflector.go:404] "Listing and watching" type="*v1.PersistentVolumeClaim" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901718       1 reflector.go:358] "Starting reflector" type="*v1.Service" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901727       1 reflector.go:404] "Listing and watching" type="*v1.Service" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901775       1 reflector.go:358] "Starting reflector" type="*v1.ReplicaSet" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901784       1 reflector.go:404] "Listing and watching" type="*v1.ReplicaSet" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901840       1 reflector.go:358] "Starting reflector" type="*v1.StatefulSet" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901850       1 reflector.go:404] "Listing and watching" type="*v1.StatefulSet" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901896       1 reflector.go:358] "Starting reflector" type="*v1.DaemonSet" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901907       1 reflector.go:404] "Listing and watching" type="*v1.DaemonSet" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901965       1 reflector.go:358] "Starting reflector" type="*v1.Namespace" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.901975       1 reflector.go:404] "Listing and watching" type="*v1.Namespace" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.902016       1 reflector.go:358] "Starting reflector" type="*v1.PodDisruptionBudget" resyncPeriod="0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.902026       1 reflector.go:404] "Listing and watching" type="*v1.PodDisruptionBudget" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.945189       1 reflector.go:436] "Caches populated" type="*v1.StorageClass" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:56.945508       1 reflector.go:436] "Caches populated" type="*v1.PersistentVolume" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.045949       1 reflector.go:436] "Caches populated" type="*v1.CSINode" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.046314       1 reflector.go:436] "Caches populated" type="*v1.CSIDriver" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.046518       1 reflector.go:436] "Caches populated" type="*v1.CSIStorageCapacity" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.046674       1 reflector.go:436] "Caches populated" type="*v1.ReplicationController" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.046900       1 reflector.go:436] "Caches populated" type="*v1.Job" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.047923       1 reflector.go:436] "Caches populated" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.048167       1 reflector.go:436] "Caches populated" type="*v1.Node" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.144797       1 request.go:683] "Waited before sending request" delay="243.071317ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/api/v1/persistentvolumeclaims?limit=500&resourceVersion=0"
+I1017 15:03:57.144831       1 reflector.go:436] "Caches populated" type="*v1.VolumeAttachment" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.244958       1 reflector.go:436] "Caches populated" type="*v1.PersistentVolumeClaim" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.301581       1 request.go:683] "Waited before sending request" delay="399.797125ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/api/v1/services?limit=500&resourceVersion=0"
+I1017 15:03:57.303406       1 reflector.go:436] "Caches populated" type="*v1.Service" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.501367       1 request.go:683] "Waited before sending request" delay="599.499454ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/apis/apps/v1/replicasets?limit=500&resourceVersion=0"
+I1017 15:03:57.504274       1 reflector.go:436] "Caches populated" type="*v1.ReplicaSet" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.701241       1 request.go:683] "Waited before sending request" delay="799.33668ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/apis/apps/v1/statefulsets?limit=500&resourceVersion=0"
+I1017 15:03:57.703044       1 reflector.go:436] "Caches populated" type="*v1.StatefulSet" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:57.900685       1 request.go:683] "Waited before sending request" delay="998.719289ms" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/apis/apps/v1/daemonsets?limit=500&resourceVersion=0"
+I1017 15:03:57.903627       1 reflector.go:436] "Caches populated" type="*v1.DaemonSet" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:58.101645       1 request.go:683] "Waited before sending request" delay="1.199605706s" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/api/v1/namespaces?limit=500&resourceVersion=0"
+I1017 15:03:58.101683       1 request.go:752] "Waited before sending request" delay="1.199605706s" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/api/v1/namespaces?limit=500&resourceVersion=0"
+I1017 15:03:58.103427       1 reflector.go:436] "Caches populated" type="*v1.Namespace" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:58.301379       1 request.go:683] "Waited before sending request" delay="1.399286402s" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://172.20.0.1:443/apis/policy/v1/poddisruptionbudgets?limit=500&resourceVersion=0"
+I1017 15:03:58.303189       1 reflector.go:436] "Caches populated" type="*v1.PodDisruptionBudget" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:58.347035       1 reflector.go:358] "Starting reflector" type="*v1.Pod" resyncPeriod="1h0m0s" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:58.347093       1 reflector.go:404] "Listing and watching" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:03:58.347327       1 main.go:90] Registered cleanup signal handler
+I1017 15:03:58.347479       1 node_instances_cache.go:156] Start refreshing cloud provider node instances cache
+I1017 15:03:58.347559       1 node_instances_cache.go:168] Refresh cloud provider node instances cache finished, refresh took 7.718µs
+I1017 15:03:58.349042       1 reflector.go:436] "Caches populated" type="*v1.Pod" reflector="pkg/mod/k8s.io/client-go@v0.34.1/tools/cache/reflector.go:290"
+I1017 15:04:08.347696       1 static_autoscaler.go:270] Starting main loop
+I1017 15:04:08.347740       1 static_autoscaler.go:1173] Found 17 pods in the cluster: 16 scheduled, 1 unschedulable, 0 unprocessed by scheduler, 0 ignored (most likely using custom scheduler)
+I1017 15:04:08.348689       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+W1017 15:04:08.553827       1 clusterstate.go:493] AcceptableRanges have not been populated yet. Skip checking
+I1017 15:04:08.553940       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:04:08.554013       1 klogx.go:87] failed to find place for apps/cart-service-0: can't schedule pod apps/cart-service-0: couldn't find a matching Node with passing predicates
+I1017 15:04:08.554032       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:04:08.554063       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:04:08.554068       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 1 unschedulable pods left
+I1017 15:04:08.554077       1 klogx.go:87] Pod apps/cart-service-0 is unschedulable
+I1017 15:04:08.554099       1 orchestrator.go:110] Upcoming 0 nodes
+I1017 15:04:08.554491       1 waste.go:56] Expanding Node Group eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 would waste 50.00% CPU, 89.99% Memory, 69.99% Blended
+I1017 15:04:08.554525       1 orchestrator.go:185] Best option to resize: eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183
+I1017 15:04:08.554538       1 orchestrator.go:189] Estimated 1 nodes needed in eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183
+I1017 15:04:08.554568       1 orchestrator.go:261] Final scale-up plan: [{eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 1->2 (max: 3)}]
+I1017 15:04:08.554596       1 executor.go:164] Scale-up: setting group eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 size to 2
+I1017 15:04:08.644748       1 event_sink_logging_wrapper.go:48] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"kube-system", Name:"cluster-autoscaler-status", UID:"747d694c-f32f-4bc5-a247-e19c97c4d07a", APIVersion:"v1", ResourceVersion:"171224", FieldPath:""}): type: 'Normal' reason: 'ScaledUpGroup' Scale-up: setting group eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 size to 2 instead of 1 (max: 3)
+I1017 15:04:08.645044       1 auto_scaling_groups.go:267] Setting asg eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 size to 2
+I1017 15:04:08.916187       1 eventing_scale_up_processor.go:47] Skipping event processing for unschedulable pods since there is a ScaleUp attempt this loop
+I1017 15:04:08.916200       1 event_sink_logging_wrapper.go:48] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"kube-system", Name:"cluster-autoscaler-status", UID:"747d694c-f32f-4bc5-a247-e19c97c4d07a", APIVersion:"v1", ResourceVersion:"171224", FieldPath:""}): type: 'Normal' reason: 'ScaledUpGroup' Scale-up: group eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 size set to 2 instead of 1 (max: 3)
+I1017 15:04:08.916249       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:04:08.916539       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:04:08.916624       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:04:08.923226       1 event_sink_logging_wrapper.go:48] Event(v1.ObjectReference{Kind:"Pod", Namespace:"apps", Name:"cart-service-0", UID:"4b940a5f-9ed8-41f9-a43b-301f928f7577", APIVersion:"v1", ResourceVersion:"143247", FieldPath:""}): type: 'Normal' reason: 'TriggeredScaleUp' pod triggered scale-up: [{eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 1->2 (max: 3)}]
+I1017 15:04:18.945826       1 static_autoscaler.go:270] Starting main loop
+I1017 15:04:18.945891       1 static_autoscaler.go:1173] Found 17 pods in the cluster: 16 scheduled, 1 unschedulable, 0 unprocessed by scheduler, 0 ignored (most likely using custom scheduler)
+I1017 15:04:18.947605       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:04:18.948216       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:04:18.948627       1 klogx.go:87] Pod apps/cart-service-0 can be moved to template-node-for-eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183-2442502199530460009-upcoming-0
+I1017 15:04:18.948697       1 filter_out_schedulable.go:122] 1 pods marked as unschedulable can be scheduled.
+I1017 15:04:18.948733       1 filter_out_schedulable.go:77] Schedulable pods present
+I1017 15:04:18.948787       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:04:18.948826       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:04:18.948903       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:04:19.044871       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:04:19.044950       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:04:29.056250       1 static_autoscaler.go:270] Starting main loop
+I1017 15:04:29.056685       1 static_autoscaler.go:1173] Found 17 pods in the cluster: 16 scheduled, 1 unschedulable, 0 unprocessed by scheduler, 0 ignored (most likely using custom scheduler)
+I1017 15:04:29.059463       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:04:29.060738       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:04:29.060930       1 klogx.go:87] Pod apps/cart-service-0 can be moved to template-node-for-eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183-4978018100953494927-upcoming-0
+I1017 15:04:29.060991       1 filter_out_schedulable.go:122] 1 pods marked as unschedulable can be scheduled.
+I1017 15:04:29.061038       1 filter_out_schedulable.go:77] Schedulable pods present
+I1017 15:04:29.061062       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:04:29.061118       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:04:29.103462       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:04:29.103729       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:04:29.144783       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:04:39.155941       1 static_autoscaler.go:270] Starting main loop
+I1017 15:04:39.156003       1 static_autoscaler.go:1173] Found 17 pods in the cluster: 16 scheduled, 1 unschedulable, 0 unprocessed by scheduler, 0 ignored (most likely using custom scheduler)
+I1017 15:04:39.157358       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:04:39.157839       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:04:39.157922       1 klogx.go:87] Pod apps/cart-service-0 can be moved to template-node-for-eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183-8795317575993535159-upcoming-0
+I1017 15:04:39.157930       1 filter_out_schedulable.go:122] 1 pods marked as unschedulable can be scheduled.
+I1017 15:04:39.157938       1 filter_out_schedulable.go:77] Schedulable pods present
+I1017 15:04:39.157944       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:04:39.157961       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:04:39.157976       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:04:39.158130       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:04:39.158165       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:04:49.250604       1 static_autoscaler.go:270] Starting main loop
+I1017 15:04:49.250673       1 static_autoscaler.go:1173] Found 21 pods in the cluster: 20 scheduled, 1 unschedulable, 0 unprocessed by scheduler, 0 ignored (most likely using custom scheduler)
+I1017 15:04:49.252597       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+W1017 15:04:49.252983       1 clusterstate.go:1097] Failed to check cloud provider has instance for ip-10-0-30-26.ap-southeast-7.compute.internal: node is not present in aws: could not find instance {aws:///ap-southeast-7b/i-0fafb8eb7d284b293 i-0fafb8eb7d284b293}
+I1017 15:04:49.344858       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:04:49.344973       1 klogx.go:87] Pod apps/cart-service-0 can be moved to template-node-for-eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183-5546874941816645068-upcoming-0
+I1017 15:04:49.344986       1 filter_out_schedulable.go:122] 1 pods marked as unschedulable can be scheduled.
+I1017 15:04:49.345002       1 filter_out_schedulable.go:77] Schedulable pods present
+I1017 15:04:49.345009       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:04:49.345078       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:04:49.345096       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:04:49.345441       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:04:49.345501       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:04:59.445008       1 static_autoscaler.go:270] Starting main loop
+I1017 15:04:59.445072       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I1017 15:04:59.445083       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/enabled: k8s.io/cluster-autoscaler/staging_order_system:]
+I1017 15:04:59.558567       1 auto_scaling_groups.go:161] Updated ASG cache for eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183. min/max/current is 0/3/2
+I1017 15:04:59.558600       1 aws_wrapper.go:710] 0 launch configurations to query
+I1017 15:04:59.558605       1 aws_wrapper.go:711] 0 launch templates to query
+I1017 15:04:59.558610       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I1017 15:04:59.558616       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I1017 15:04:59.558622       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I1017 15:04:59.558659       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2025-10-17 15:05:59.558655536 +0000 UTC m=+148.113459831
+I1017 15:04:59.645924       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:04:59.646250       1 clusterstate.go:285] Scale up in group eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183 finished successfully in 50.528925973s
+I1017 15:04:59.646308       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:04:59.646316       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:04:59.646324       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:04:59.646329       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:04:59.646346       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:04:59.646364       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:04:59.646542       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:04:59.646594       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:04:59.646626       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:05:09.745995       1 static_autoscaler.go:270] Starting main loop
+I1017 15:05:09.747955       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:05:09.748175       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:05:09.748191       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:05:09.748199       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:05:09.748204       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:05:09.748220       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:05:09.748235       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:05:09.748499       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:09.748559       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:09.748594       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:05:19.845677       1 static_autoscaler.go:270] Starting main loop
+I1017 15:05:19.848119       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:05:19.848614       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:05:19.848691       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:05:19.848713       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:05:19.848728       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:05:19.848767       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:05:19.848833       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:05:19.849110       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:19.849244       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:19.849301       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:05:30.351212       1 static_autoscaler.go:270] Starting main loop
+I1017 15:05:30.352714       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:05:30.352985       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:05:30.353044       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:05:30.353085       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:05:30.353103       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:05:30.353129       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:05:30.353180       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:05:30.353367       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:30.353458       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:30.353519       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:05:40.364904       1 static_autoscaler.go:270] Starting main loop
+I1017 15:05:40.366117       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:05:40.366412       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:05:40.366536       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:05:40.366576       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:05:40.366635       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:05:40.366683       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:05:40.366763       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:05:40.367002       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:40.367120       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:40.367197       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:05:50.375673       1 static_autoscaler.go:270] Starting main loop
+I1017 15:05:50.377233       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:05:50.377745       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:05:50.377762       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:05:50.377772       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:05:50.377777       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:05:50.378009       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:05:50.378032       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:05:50.378172       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:50.378215       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:05:50.378244       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:05:58.348511       1 node_instances_cache.go:156] Start refreshing cloud provider node instances cache
+I1017 15:05:58.348557       1 node_instances_cache.go:168] Refresh cloud provider node instances cache finished, refresh took 17.538µs
+I1017 15:06:00.386825       1 static_autoscaler.go:270] Starting main loop
+I1017 15:06:00.386914       1 auto_scaling_groups.go:428] Regenerating instance to ASG map for ASG names: []
+I1017 15:06:00.386928       1 auto_scaling_groups.go:435] Regenerating instance to ASG map for ASG tags: map[k8s.io/cluster-autoscaler/enabled: k8s.io/cluster-autoscaler/staging_order_system:]
+I1017 15:06:00.473289       1 auto_scaling_groups.go:161] Updated ASG cache for eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183. min/max/current is 0/3/2
+I1017 15:06:00.473326       1 aws_wrapper.go:710] 0 launch configurations to query
+I1017 15:06:00.473331       1 aws_wrapper.go:711] 0 launch templates to query
+I1017 15:06:00.473337       1 aws_wrapper.go:731] Successfully queried 0 launch configurations
+I1017 15:06:00.473342       1 aws_wrapper.go:742] Successfully queried 0 launch templates
+I1017 15:06:00.473347       1 aws_wrapper.go:753] Successfully queried instance requirements for 0 ASGs
+I1017 15:06:00.473355       1 aws_manager.go:132] Refreshed ASG list, next refresh after 2025-10-17 15:07:00.4733527 +0000 UTC m=+209.028156989
+I1017 15:06:00.474271       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:06:00.474463       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:06:00.474473       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:06:00.474481       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:06:00.474486       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:06:00.474503       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:06:00.474518       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:06:00.474663       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:00.474716       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:00.474745       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:06:10.645932       1 static_autoscaler.go:270] Starting main loop
+I1017 15:06:10.646893       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:06:10.647366       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:06:10.647489       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:06:10.647578       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:06:10.647638       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:06:10.647828       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:06:10.647909       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:06:10.649288       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:10.649382       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:10.649430       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:06:20.753009       1 static_autoscaler.go:270] Starting main loop
+I1017 15:06:20.754258       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:06:20.754480       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:06:20.754491       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:06:20.754500       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:06:20.754506       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:06:20.754524       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:06:20.754539       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:06:20.754728       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:20.754944       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:20.754986       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:06:30.854319       1 static_autoscaler.go:270] Starting main loop
+I1017 15:06:30.855274       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:06:30.855443       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:06:30.855452       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:06:30.855459       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:06:30.855463       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:06:30.855479       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:06:30.855494       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:06:30.855613       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:30.855666       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:30.855693       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
+I1017 15:06:40.867209       1 static_autoscaler.go:270] Starting main loop
+I1017 15:06:40.868546       1 aws_manager.go:188] Found multiple availability zones for ASG "eks-general-40ccf84a-2b3a-3a2b-f91a-178f82b84183"; using ap-southeast-7b for failure-domain.beta.kubernetes.io/zone label
+I1017 15:06:40.868849       1 filter_out_schedulable.go:65] Filtering out schedulables
+I1017 15:06:40.868868       1 filter_out_schedulable.go:122] 0 pods marked as unschedulable can be scheduled.
+I1017 15:06:40.868878       1 filter_out_schedulable.go:85] No schedulable pods
+I1017 15:06:40.868887       1 filter_out_daemon_sets.go:47] Filtered out 0 daemon set pods, 0 unschedulable pods left
+I1017 15:06:40.868982       1 static_autoscaler.go:520] No unschedulable pods
+I1017 15:06:40.869013       1 static_autoscaler.go:559] Calculating unneeded nodes
+I1017 15:06:40.869203       1 eligibility.go:163] Node ip-10-0-6-7.ap-southeast-7.compute.internal unremovable: cpu requested (85.7513% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:40.869276       1 eligibility.go:163] Node ip-10-0-30-26.ap-southeast-7.compute.internal unremovable: cpu requested (61.1399% of allocatable) is above the scale-down utilization threshold
+I1017 15:06:40.869329       1 static_autoscaler.go:602] Scale down status: lastScaleUpTime=2025-10-17 15:04:08.347574161 +0000 UTC m=+36.902378442 lastScaleDownDeleteTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 lastScaleDownFailTime=2025-10-17 14:03:56.900272779 +0000 UTC m=-3574.544922922 scaleDownForbidden=false scaleDownInCooldown=true
