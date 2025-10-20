@@ -10,6 +10,10 @@ Pod Identity Explain: https://www.youtube.com/watch?v=aUjJSorBE70
 
 https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/service/nlb/
 
+https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md
+
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html
+
 ---
 
 ### Modes:
