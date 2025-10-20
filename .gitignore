@@ -1,4 +1,6 @@
 terraform.tfstate
 terraform.tfstate.backup
-tmp/
+.tmp/
 .terraform/
+ignore.tfvars
+.vscode/
