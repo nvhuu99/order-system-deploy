@@ -16,7 +16,7 @@ resource "null_resource" "linkerd_identity_ca" {
   triggers = { run_once = "1" }
 
   provisioner "local-exec" {
-    interpreter = ["C:/Program Files/Git/bin/bash.exe", "-c"]
+    interpreter = ["bash", "-c"]
     command     = <<EOT
     kubectl create secret generic linkerd-identity-ca-crt --namespace linkerd --from-file="${var.linkerd_identity_ca_crt_path}/linkerd-identity-ca.crt" --dry-run=client -o yaml | \
     kubeseal --controller-name=sealed-secrets-controller --controller-namespace=kube-system --format yaml | \

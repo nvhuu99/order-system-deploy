@@ -27,11 +27,12 @@ resource "null_resource" "cluster_resource_limit" {
   triggers = { cluster_endpoint = kind_cluster.main.endpoint }
 
   provisioner "local-exec" {
+    interpreter = ["bash", "-c"]
     command = <<EOT
-    docker update --cpus=1 --memory=1g --memory-swap=3g ${var.cluster_name}-control-plane
-    ${join("\n", [
+    docker update --cpus=${var.control_plane_cpu_cores} --memory=${var.control_plane_memory_gi}g --memory-swap=${local.control_plane_swap_mem_gi}g ${var.cluster_name}-control-plane && 
+    ${join(" && ", [
       for name in local.worker_names :
-      format("docker update --cpus=3 --memory=3g --memory-swap=6g %s", name)
+      format("docker update --cpus=%s --memory=%sg --memory-swap=%sg %s", local.worker_cpu_cores, local.worker_memory_gi, local.worker_swap_mem_gi, name)
     ])}
     EOT
   }
