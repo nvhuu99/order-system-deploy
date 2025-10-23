@@ -13,7 +13,7 @@ resource "aws_eks_node_group" "general" {
   }
 
   capacity_type  = "ON_DEMAND"
-  instance_types = ["t3.small", "t3.medium"]
+  instance_types = ["t3.medium"]
 
   scaling_config {
     desired_size = 1
@@ -53,7 +53,7 @@ resource "aws_launch_template" "general" {
   # Instead, to fetch metadata, they will use region, vpcId, zone, nodeId ...
   # e.g: AWS Load Balancer Controller, AWS EBS CSI
   metadata_options {
-    http_put_response_hop_limit = 1
+    http_put_response_hop_limit = 3
   }
 }
 
