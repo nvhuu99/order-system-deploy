@@ -9,7 +9,7 @@ resource "helm_release" "metrics_server" {
   values = [file("${path.module}/charts/metrics-server/values.yaml")]
 
   depends_on = [
-    null_resource.update_local_kubeconfig,
     aws_eks_node_group.general,
+    null_resource.update_local_kubeconfig,
   ]
 }

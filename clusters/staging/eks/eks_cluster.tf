@@ -23,16 +23,6 @@ resource "aws_eks_cluster" "main" {
   }
 }
 
-resource "null_resource" "update_local_kubeconfig" {
-  depends_on = [aws_eks_cluster.main]
-  triggers = {
-    cluster_endpoint = aws_eks_cluster.main.endpoint
-  }
-  provisioner "local-exec" {
-    command = "aws eks update-kubeconfig --region ${local.region} --name ${aws_eks_cluster.main.name}"
-  }
-}
-
 resource "aws_iam_role" "cluster" {
   name = "${local.cluster_name}_cluster_role"
   assume_role_policy = jsonencode({

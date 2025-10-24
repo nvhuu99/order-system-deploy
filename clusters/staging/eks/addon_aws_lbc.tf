@@ -18,8 +18,9 @@ resource "helm_release" "aws_lbc" {
   ]
 
   depends_on = [
-    null_resource.update_local_kubeconfig,
+    aws_eks_node_group.general,
     aws_iam_role_policy_attachment.aws_lbc,
+    null_resource.update_local_kubeconfig,
   ]
 }
 

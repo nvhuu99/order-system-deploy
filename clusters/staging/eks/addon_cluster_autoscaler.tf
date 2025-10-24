@@ -18,8 +18,9 @@ resource "helm_release" "cluster_autoscaler" {
   ]
 
   depends_on = [
-    null_resource.update_local_kubeconfig,
+    aws_eks_node_group.general,
     aws_iam_role_policy_attachment.cluster_autoscaler,
+    null_resource.update_local_kubeconfig,
     helm_release.metrics_server,
   ]
 }
