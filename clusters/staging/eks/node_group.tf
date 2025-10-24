@@ -9,7 +9,7 @@ resource "aws_eks_node_group" "general" {
 
   launch_template {
     id      = aws_launch_template.general.id
-    version = "$Latest"
+    version = "1"
   }
 
   capacity_type  = "ON_DEMAND"
@@ -17,7 +17,7 @@ resource "aws_eks_node_group" "general" {
 
   scaling_config {
     desired_size = 1
-    max_size     = 3
+    max_size     = 5
     min_size     = 0
   }
 
